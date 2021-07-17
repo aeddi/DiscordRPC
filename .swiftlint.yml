@@ -1,0 +1,5 @@
+identifier_name:
+  min_length: 1
+line_length:
+  ignores_urls: true
+reporter: "github-actions-logging"

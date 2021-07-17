@@ -1,0 +1,4 @@
+# See https://github.com/zeke/semantic-pull-requests#configuration
+titleAndCommits: true
+allowMergeCommits: true
+allowRevertCommits: true

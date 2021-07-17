@@ -1,0 +1,54 @@
+name: Pull Request Validation
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  lint_swift:
+    name: Lint Swift
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout Changes
+        uses: actions/checkout@v2
+
+      - name: Lint Swift
+        uses: norio-nomura/action-swiftlint@3.2.1
+        with:
+          args: --strict
+
+  test_doc_gen:
+    name: Test Doc Generation
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout Changes
+        uses: actions/checkout@v2
+
+      - name: Generate HTML Documentation
+        uses: SwiftDocOrg/swift-doc@master
+        with:
+          inputs: "Sources"
+          module-name: DiscordRPC
+          format: "html"
+          output: "Documentation"
+
+      - name: Generate Markdown Documentation
+        uses: SwiftDocOrg/swift-doc@master
+        with:
+          inputs: "Sources"
+          module-name: DiscordRPC
+          format: "commonmark"
+          output: "Documentation"
+
+  validate_package:
+    name: Swift Package Validation
+    runs-on: macos-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout Changes
+        uses: actions/checkout@v2
+
+      - name: Build Swift Package
+        run: swift build
