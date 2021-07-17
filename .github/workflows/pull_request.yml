@@ -1,0 +1,37 @@
+name: Pull Request Validation
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  lint_swift:
+    name: Lint Swift
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout Changes
+        uses: actions/checkout@v2
+
+      - name: Lint Swift
+        uses: norio-nomura/action-swiftlint@3.2.1
+        with:
+          args: --strict
+
+  test_doc_gen:
+    name: Test Doc Generation
+    runs-on: macos-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout Changes
+        uses: actions/checkout@v2
+
+      - name: Generate Jazzy Documentation
+        run: |
+            gem install jazzy
+            jazzy \
+                --output htmlDocumentation \
+                --config .github/jazzy.yml \
+                --module-version 0.0.42 \
+                --readme README.md \
+                --github-file-prefix 'https://github.com/aeddi/DiscordRPC/tree/0.0.42'
