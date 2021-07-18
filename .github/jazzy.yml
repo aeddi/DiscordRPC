@@ -1,0 +1,81 @@
+swift_build_tool: spm
+
+module: DiscordRPC
+author: aeddi
+author_url: https://github.com/aeddi
+github_url: https://github.com/aeddi/DiscordRPC
+root_url: https://aeddi.github.io/DiscordRPC
+copyright: '© 2021 [Antoine Eddi](https://github.com/aeddi) under [MIT License](https://github.com/aeddi/DiscordRPC/blob/master/LICENSE)'
+
+theme: apple
+head: |
+    <link rel="icon" type="image/png" sizes="96x96" href="https://aeddi.github.io/DiscordRPC/img/favicon/96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://aeddi.github.io/DiscordRPC/img/favicon/32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://aeddi.github.io/DiscordRPC/img/favicon/16x16.png">
+
+custom_categories:
+  - name: Main Class
+    children:
+    - DiscordRPC
+
+  - name: Events
+    children:
+    - EventClose
+    - EventError
+    - EventReady
+    - EventVoiceChannelSelect
+
+  - name: Responses
+    children:
+    - ResponseAuthenticate
+    - ResponseAuthorize
+    - ResponseGetGuilds
+    - ResponseSubscribe
+    - ResponseUnsubscribe
+
+  - name: Types
+    children:
+    - AccessToken
+    - Channel
+    - Config
+    - Emoji
+    - Guild
+    - GuildFeature
+    - GuildMember
+    - OAuth2Application
+    - Presence
+    - RPCToken
+    - Role
+    - StageInstance
+    - User
+    - VoiceState
+    - WelcomeScreen
+
+  - name: Enumerations
+    children:
+    - CloseEventCode
+    - CommandType
+    - ErrorCode
+    - EventType
+    - OAuth2Scope
+    - PremiumType
+    - UserFlag
+
+  - name: Errors
+    children:
+    - CommandError
+    - HTTPError
+    - NonceError
+    - RPCError
+    - RequestError
+
+  - name: Helpers
+    children:
+    - fetchUserAvatarData(id:avatar:timeout:)
+    - fetchUserAvatarImage(id:avatar:timeout:)
+    - newJSONDecoder()
+    - newJSONEncoder()
+
+  - name: Extensions
+    children:
+    - DateFormatter

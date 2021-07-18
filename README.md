@@ -1,10 +1,11 @@
 # DiscordRPC
 
-[![License](https://img.shields.io/github/license/aeddi/DiscordRPC?color=blue)](./LICENSE)
-[![Platform](https://img.shields.io/badge/platform-macOS%2011-blueviolet)](#Requirements)
-[![Language](https://img.shields.io/badge/language-Swift%205-blueviolet)](#Requirements)
-[![Docs Web](https://img.shields.io/badge/docs-Web-lightgrey)](todo)
-[![Docs Markdown](https://img.shields.io/badge/docs-Markdown-lightgrey)](./Documentation/Home.md)
+[![Build](https://img.shields.io/github/workflow/status/aeddi/DiscordRPC/Release)](https://github.com/aeddi/DiscordRPC/actions/workflows/release.yml)
+[![Release](https://img.shields.io/github/v/release/aeddi/DiscordRPC?color=success)](https://github.com/aeddi/DiscordRPC/releases)
+[![Platform](https://img.shields.io/badge/platform-macOS%2011-orange)](#Requirements)
+[![Language](https://img.shields.io/badge/language-Swift%205-orange)](#Requirements)
+[![Documentation](https://img.shields.io/badge/documentation-Jazzy-blueviolet)](https://aeddi.github.io/DiscordRPC)
+[![License](https://img.shields.io/github/license/aeddi/DiscordRPC?color=blue)](https://github.com/aeddi/DiscordRPC/blob/master/LICENSE)
 
 A Discord RPC library for Swift on macOS.  
 
@@ -175,8 +176,11 @@ func persistentAuthentication(rpc: DiscordRPC) throws -> ResponseAuthenticate {
 
 ### Documentation
 
-- Markdown version is available in [Documentation folder](./Documentation/Home.md)
-- Web version is available on [Github Pages](todo)
+Generated using [Jazzy](https://github.com/realm/jazzy) and hosted on [GitHub Pages](https://aeddi.github.io/DiscordRPC).
+
+## Changelog
+
+See [Changelog.md](https://github.com/aeddi/DiscordRPC/blob/master/CHANGELOG.md).
 
 ## Credits
 
