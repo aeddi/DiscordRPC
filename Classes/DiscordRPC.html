@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DiscordRPC Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    <link rel="icon" type="image/png" sizes="96x96" href="https://aeddi.github.io/DiscordRPC/img/favicon/96x96.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://aeddi.github.io/DiscordRPC/img/favicon/32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://aeddi.github.io/DiscordRPC/img/favicon/16x16.png">
+
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/DiscordRPC" class="dashAnchor"></a>
+    <a title="DiscordRPC Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">DiscordRPC 1.0.0 Docs</a> (5% documented)</p>
+        <p class="header-right"><a href="https://github.com/aeddi/DiscordRPC"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Faeddi.github.io%2FDiscordRPC%2Fdocsets%2FDiscordRPC.xml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">DiscordRPC Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        DiscordRPC Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Main%20Class.html">Main Class</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/DiscordRPC.html">DiscordRPC</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Events.html">Events</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/EventClose.html">EventClose</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EventError.html">EventError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EventReady.html">EventReady</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EventVoiceChannelSelect.html">EventVoiceChannelSelect</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Responses.html">Responses</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ResponseAuthenticate.html">ResponseAuthenticate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ResponseAuthorize.html">ResponseAuthorize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ResponseGetGuilds.html">ResponseGetGuilds</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ResponseSubscribe.html">ResponseSubscribe</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ResponseUnsubscribe.html">ResponseUnsubscribe</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Types.html">Types</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AccessToken.html">AccessToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Types.html#/s:10DiscordRPC7ChannelC">Channel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Config.html">Config</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Types.html#/s:10DiscordRPC5EmojiC">Emoji</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Guild.html">Guild</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Types.html#/s:10DiscordRPC12GuildFeatureC">GuildFeature</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Types.html#/s:10DiscordRPC11GuildMemberC">GuildMember</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OAuth2Application.html">OAuth2Application</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Types.html#/s:10DiscordRPC8PresenceC">Presence</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RPCToken.html">RPCToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Types.html#/s:10DiscordRPC4RoleC">Role</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Types.html#/s:10DiscordRPC13StageInstanceC">StageInstance</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/User.html">User</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Types.html#/s:10DiscordRPC10VoiceStateC">VoiceState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Types.html#/s:10DiscordRPC13WelcomeScreenC">WelcomeScreen</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enumerations.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CloseEventCode.html">CloseEventCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CommandType.html">CommandType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ErrorCode.html">ErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/EventType.html">EventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OAuth2Scope.html">OAuth2Scope</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PremiumType.html">PremiumType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UserFlag.html">UserFlag</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Errors.html">Errors</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CommandError.html">CommandError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HTTPError.html">HTTPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NonceError.html">NonceError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RPCError.html">RPCError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RequestError.html">RequestError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Helpers.html">Helpers</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Helpers.html#/s:10DiscordRPC19fetchUserAvatarData2id6avatar7timeout10Foundation0F0VSS_SSSiSgtKF">fetchUserAvatarData(id:avatar:timeout:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Helpers.html#/s:10DiscordRPC20fetchUserAvatarImage2id6avatar7timeoutSo7NSImageCSS_SSSiSgtKF">fetchUserAvatarImage(id:avatar:timeout:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Helpers.html#/s:10DiscordRPC14newJSONDecoder10Foundation0D0CyF">newJSONDecoder()</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Helpers.html#/s:10DiscordRPC14newJSONEncoder10Foundation0D0CyF">newJSONEncoder()</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/DateFormatter.html">DateFormatter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/EventErrorData.html">EventErrorData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EventReadyData.html">EventReadyData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EventVoiceChannelSelectData.html">EventVoiceChannelSelectData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Frame.html">Frame</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ResponseAuthenticateData.html">ResponseAuthenticateData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ResponseAuthorizeData.html">ResponseAuthorizeData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ResponseGetGuildsData.html">ResponseGetGuildsData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ResponseSubscribeData.html">ResponseSubscribeData</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>DiscordRPC</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">DiscordRPC</span></code></pre>
+
+                </div>
+              </div>
+            <p>An object that manages an RPC connection to Discord through <a href="https://en.wikipedia.org/wiki/Unix_domain_socket">UDS</a>
+and allows to interact with the Discord API using Swift types and methods.</p>
+
+              <div class="slightly-smaller">
+                <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/DiscordRPC.swift#L6-L80">Show on GitHub</a>
+              </div>
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPCAAC8clientIDSSvp"></a>
+                    <a name="//apple_ref/swift/Property/clientID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPCAAC8clientIDSSvp">clientID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Client ID of your Discord Application, set during <code>init()</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">clientID</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/DiscordRPC.swift#L8">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPCAAC12clientSecretSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/clientSecret" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPCAAC12clientSecretSSSgvp">clientSecret</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Client Secret of your Discord Application, set during <code>init()</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">clientSecret</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/DiscordRPC.swift#L10">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPCAAC10cmdTimeoutSivp"></a>
+                    <a name="//apple_ref/swift/Property/cmdTimeout" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPCAAC10cmdTimeoutSivp">cmdTimeout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Time limit in milliseconds for a sync command to get a response (default: 1000)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">cmdTimeout</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/DiscordRPC.swift#L12">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPCAAC8clientID0C6SecretABSS_SSSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(clientID:clientSecret:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPCAAC8clientID0C6SecretABSS_SSSgtcfc">init(clientID:<wbr>clientSecret:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new DiscordRPC instance using the given <code><a href="../Classes/DiscordRPC.html#/s:10DiscordRPCAAC8clientIDSSvp">clientID</a></code> and optionnal <code><a href="../Classes/DiscordRPC.html#/s:10DiscordRPCAAC12clientSecretSSSgvp">clientSecret</a></code>.
+To get these, go to your <a href="https://discord.com/developers/applications">Discord Dashboard</a> under OAuth2 section.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">clientID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">clientSecret</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/DiscordRPC.swift#L30-L43">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPCAAC7connectyyKF"></a>
+                    <a name="//apple_ref/swift/Method/connect()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPCAAC7connectyyKF">connect()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Init connection to the Discord RPC API, this will trigger:
+    - on success:  an <code><a href="../Classes/EventReady.html">EventReady</a></code> event on the <code>connectHandler</code>
+    - on failure: an <code><a href="../Classes/EventClose.html">EventClose</a></code> event  on the <code>disconnectHandler</code></p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <ul>
+<li><code><a href="../Enums/RPCError.html#/s:10DiscordRPC8RPCErrorO12appSandboxedyA2CmF">RPCError.appSandboxed</a></code>: If the current application is sandboxed</li>
+<li><code>RPCError.socketCreation</code>: If the creation of the socket failed</li>
+<li><code>RPCError.udsNotFound</code>: If unable to find the Discord UDS file</li>
+</ul>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">connect</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/DiscordRPC.swift#L52-L74">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPCAAC10disconnectyyF"></a>
+                    <a name="//apple_ref/swift/Method/disconnect()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPCAAC10disconnectyyF">disconnect()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Disconnect from the Discord RPC API.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">disconnect</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/DiscordRPC.swift#L77-L79">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPCAAC9authorize12oAuth2Scopes8username8rpcTokenAA17ResponseAuthorizeCSayAA11OAuth2ScopeOG_SSSgALtKF"></a>
+                    <a name="//apple_ref/swift/Method/authorize(oAuth2Scopes:username:rpcToken:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPCAAC9authorize12oAuth2Scopes8username8rpcTokenAA17ResponseAuthorizeCSayAA11OAuth2ScopeOG_SSSgALtKF">authorize(oAuth2Scopes:<wbr>username:<wbr>rpcToken:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">authorize</span><span class="p">(</span>
+    <span class="nv">oAuth2Scopes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/OAuth2Scope.html">OAuth2Scope</a></span><span class="p">],</span>
+    <span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">rpcToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/ResponseAuthorize.html">ResponseAuthorize</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Commands.swift#L4-L20">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPCAAC14authorizeAsync12oAuth2Scopes8username8rpcTokenSSSayAA11OAuth2ScopeOG_SSSgAJtKF"></a>
+                    <a name="//apple_ref/swift/Method/authorizeAsync(oAuth2Scopes:username:rpcToken:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPCAAC14authorizeAsync12oAuth2Scopes8username8rpcTokenSSSayAA11OAuth2ScopeOG_SSSgAJtKF">authorizeAsync(oAuth2Scopes:<wbr>username:<wbr>rpcToken:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">authorizeAsync</span><span class="p">(</span>
+    <span class="nv">oAuth2Scopes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/OAuth2Scope.html">OAuth2Scope</a></span><span class="p">],</span>
+    <span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">rpcToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Commands.swift#L22-L38">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPCAAC12authenticate11accessTokenAA20ResponseAuthenticateCSS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/authenticate(accessToken:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPCAAC12authenticate11accessTokenAA20ResponseAuthenticateCSS_tKF">authenticate(accessToken:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">authenticate</span><span class="p">(</span><span class="nv">accessToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/ResponseAuthenticate.html">ResponseAuthenticate</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Commands.swift#L40-L47">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPCAAC17authenticateAsync11accessTokenS2S_tKF"></a>
+                    <a name="//apple_ref/swift/Method/authenticateAsync(accessToken:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPCAAC17authenticateAsync11accessTokenS2S_tKF">authenticateAsync(accessToken:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">authenticateAsync</span><span class="p">(</span><span class="nv">accessToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Commands.swift#L49-L56">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPCAAC9subscribe5event2idAA17ResponseSubscribeCAA9EventTypeO_SSSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/subscribe(event:id:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPCAAC9subscribe5event2idAA17ResponseSubscribeCAA9EventTypeO_SSSgtKF">subscribe(event:<wbr>id:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">subscribe</span><span class="p">(</span><span class="nv">event</span><span class="p">:</span> <span class="kt"><a href="../Enums/EventType.html">EventType</a></span><span class="p">,</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/ResponseSubscribe.html">ResponseSubscribe</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Commands.swift#L58-L65">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPCAAC14subscribeAsync5event2idSSAA9EventTypeO_SSSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/subscribeAsync(event:id:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPCAAC14subscribeAsync5event2idSSAA9EventTypeO_SSSgtKF">subscribeAsync(event:<wbr>id:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">subscribeAsync</span><span class="p">(</span><span class="nv">event</span><span class="p">:</span> <span class="kt"><a href="../Enums/EventType.html">EventType</a></span><span class="p">,</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Commands.swift#L67-L74">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPCAAC11unsubscribe5event2idAA19ResponseUnsubscribeCAA9EventTypeO_SSSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/unsubscribe(event:id:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPCAAC11unsubscribe5event2idAA19ResponseUnsubscribeCAA9EventTypeO_SSSgtKF">unsubscribe(event:<wbr>id:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unsubscribe</span><span class="p">(</span><span class="nv">event</span><span class="p">:</span> <span class="kt"><a href="../Enums/EventType.html">EventType</a></span><span class="p">,</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/ResponseUnsubscribe.html">ResponseUnsubscribe</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Commands.swift#L76-L83">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPCAAC16unsubscribeAsync5event2idSSAA9EventTypeO_SSSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/unsubscribeAsync(event:id:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPCAAC16unsubscribeAsync5event2idSSAA9EventTypeO_SSSgtKF">unsubscribeAsync(event:<wbr>id:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unsubscribeAsync</span><span class="p">(</span><span class="nv">event</span><span class="p">:</span> <span class="kt"><a href="../Enums/EventType.html">EventType</a></span><span class="p">,</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Commands.swift#L85-L92">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPCAAC16fetchAccessToken4code7timeout11redirectURIAA0dE0CSS_SiSgSStKF"></a>
+                    <a name="//apple_ref/swift/Method/fetchAccessToken(code:timeout:redirectURI:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPCAAC16fetchAccessToken4code7timeout11redirectURIAA0dE0CSS_SiSgSStKF">fetchAccessToken(code:<wbr>timeout:<wbr>redirectURI:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchAccessToken</span><span class="p">(</span><span class="nv">code</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">,</span> <span class="nv">redirectURI</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/AccessToken.html">AccessToken</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/FetchUtils.swift#L5-L20">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPCAAC13fetchRPCToken7timeoutAA0D0CSiSg_tKF"></a>
+                    <a name="//apple_ref/swift/Method/fetchRPCToken(timeout:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPCAAC13fetchRPCToken7timeoutAA0D0CSiSg_tKF">fetchRPCToken(timeout:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchRPCToken</span><span class="p">(</span><span class="nv">timeout</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RPCToken.html">RPCToken</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/FetchUtils.swift#L23-L35">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPCAAC9onConnect7handleryyAB_AA10EventReadyCtc_tF"></a>
+                    <a name="//apple_ref/swift/Method/onConnect(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPCAAC9onConnect7handleryyAB_AA10EventReadyCtc_tF">onConnect(handler:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onConnect</span><span class="p">(</span>
+    <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">rpc</span><span class="p">:</span> <span class="kt">DiscordRPC</span><span class="p">,</span> <span class="n">_</span> <span class="nv">eventReady</span><span class="p">:</span> <span class="kt"><a href="../Classes/EventReady.html">EventReady</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Handlers.swift#L4-L8">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPCAAC12onDisconnect7handleryyAB_AA10EventCloseCtc_tF"></a>
+                    <a name="//apple_ref/swift/Method/onDisconnect(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPCAAC12onDisconnect7handleryyAB_AA10EventCloseCtc_tF">onDisconnect(handler:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onDisconnect</span><span class="p">(</span>
+    <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">rpc</span><span class="p">:</span> <span class="kt">DiscordRPC</span><span class="p">,</span> <span class="n">_</span> <span class="nv">closeError</span><span class="p">:</span> <span class="kt"><a href="../Classes/EventClose.html">EventClose</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Handlers.swift#L10-L14">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPCAAC10onResponse7handleryyAB_SSAA11CommandTypeO10Foundation4DataVtc_tF"></a>
+                    <a name="//apple_ref/swift/Method/onResponse(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPCAAC10onResponse7handleryyAB_SSAA11CommandTypeO10Foundation4DataVtc_tF">onResponse(handler:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onResponse</span><span class="p">(</span>
+    <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">rpc</span><span class="p">:</span> <span class="kt">DiscordRPC</span><span class="p">,</span> <span class="n">_</span> <span class="nv">nonce</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">commandType</span><span class="p">:</span> <span class="kt"><a href="../Enums/CommandType.html">CommandType</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Handlers.swift#L16-L20">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPCAAC7onError7handleryyAB_SSAA05EventD0Ctc_tF"></a>
+                    <a name="//apple_ref/swift/Method/onError(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPCAAC7onError7handleryyAB_SSAA05EventD0Ctc_tF">onError(handler:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onError</span><span class="p">(</span>
+    <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">rpc</span><span class="p">:</span> <span class="kt">DiscordRPC</span><span class="p">,</span> <span class="n">_</span> <span class="nv">nonce</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">eventError</span><span class="p">:</span> <span class="kt"><a href="../Classes/EventError.html">EventError</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Handlers.swift#L22-L26">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPCAAC7onEvent7handleryyAB_AA0D4TypeO10Foundation4DataVtc_tF"></a>
+                    <a name="//apple_ref/swift/Method/onEvent(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPCAAC7onEvent7handleryyAB_AA0D4TypeO10Foundation4DataVtc_tF">onEvent(handler:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onEvent</span><span class="p">(</span>
+    <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">rpc</span><span class="p">:</span> <span class="kt">DiscordRPC</span><span class="p">,</span> <span class="n">_</span> <span class="nv">eventType</span><span class="p">:</span> <span class="kt"><a href="../Enums/EventType.html">EventType</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Handlers.swift#L28-L32">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>© 2021 <a class="link" href="https://github.com/aeddi" target="_blank" rel="external">Antoine Eddi</a> under <a class="link" href="https://github.com/aeddi/DiscordRPC/blob/master/LICENSE" target="_blank" rel="external">MIT License</a></p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

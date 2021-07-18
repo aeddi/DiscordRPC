@@ -1,0 +1,2182 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Codec.swift",
+      "line": 4,
+      "symbol": "DateFormatter.iso8601Full",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Codec.swift",
+      "line": 14,
+      "symbol": "newJSONDecoder()",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Codec.swift",
+      "line": 20,
+      "symbol": "newJSONEncoder()",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Commands.swift",
+      "line": 4,
+      "symbol": "DiscordRPC.authorize(oAuth2Scopes:username:rpcToken:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Commands.swift",
+      "line": 22,
+      "symbol": "DiscordRPC.authorizeAsync(oAuth2Scopes:username:rpcToken:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Commands.swift",
+      "line": 40,
+      "symbol": "DiscordRPC.authenticate(accessToken:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Commands.swift",
+      "line": 49,
+      "symbol": "DiscordRPC.authenticateAsync(accessToken:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Commands.swift",
+      "line": 58,
+      "symbol": "DiscordRPC.subscribe(event:id:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Commands.swift",
+      "line": 67,
+      "symbol": "DiscordRPC.subscribeAsync(event:id:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Commands.swift",
+      "line": 76,
+      "symbol": "DiscordRPC.unsubscribe(event:id:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Commands.swift",
+      "line": 85,
+      "symbol": "DiscordRPC.unsubscribeAsync(event:id:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 2,
+      "symbol": "OAuth2Scope",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 3,
+      "symbol": "OAuth2Scope.activitiesRead",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 4,
+      "symbol": "OAuth2Scope.activitiesWrite",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 5,
+      "symbol": "OAuth2Scope.applicationsBuildsRead",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 6,
+      "symbol": "OAuth2Scope.applicationsBuildsUpload",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 7,
+      "symbol": "OAuth2Scope.applicationsCommands",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 8,
+      "symbol": "OAuth2Scope.applicationsCommandsUpdate",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 9,
+      "symbol": "OAuth2Scope.applicationsEntitlements",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 10,
+      "symbol": "OAuth2Scope.applicationsStoreUpdate",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 11,
+      "symbol": "OAuth2Scope.bot",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 12,
+      "symbol": "OAuth2Scope.connections",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 13,
+      "symbol": "OAuth2Scope.email",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 14,
+      "symbol": "OAuth2Scope.gdmJoin",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 15,
+      "symbol": "OAuth2Scope.guilds",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 16,
+      "symbol": "OAuth2Scope.guildsJoin",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 17,
+      "symbol": "OAuth2Scope.identify",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 18,
+      "symbol": "OAuth2Scope.messagesRead",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 19,
+      "symbol": "OAuth2Scope.relationshipsRead",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 20,
+      "symbol": "OAuth2Scope.rpc",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 21,
+      "symbol": "OAuth2Scope.rpcActivitiesWrite",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 22,
+      "symbol": "OAuth2Scope.rpcNotificationsRead",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 23,
+      "symbol": "OAuth2Scope.rpcVoiceRead",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 24,
+      "symbol": "OAuth2Scope.rpcVoiceWrite",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 25,
+      "symbol": "OAuth2Scope.webhookIncoming",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 29,
+      "symbol": "ErrorCode",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 30,
+      "symbol": "ErrorCode.unknownError",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 31,
+      "symbol": "ErrorCode.invalidPayload",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 32,
+      "symbol": "ErrorCode.invalidCommand",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 33,
+      "symbol": "ErrorCode.invalidGuild",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 34,
+      "symbol": "ErrorCode.invalidEvent",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 35,
+      "symbol": "ErrorCode.invalidChannel",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 36,
+      "symbol": "ErrorCode.invalidPermissions",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 37,
+      "symbol": "ErrorCode.invalidClientID",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 38,
+      "symbol": "ErrorCode.invalidOrigin",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 39,
+      "symbol": "ErrorCode.invalidToken",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 40,
+      "symbol": "ErrorCode.invalidUser",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 41,
+      "symbol": "ErrorCode.oAuth2Error",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 42,
+      "symbol": "ErrorCode.selectChannelTimedOut",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 43,
+      "symbol": "ErrorCode.getGuildTimedOut",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 44,
+      "symbol": "ErrorCode.selectVoiceForceRequired",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 45,
+      "symbol": "ErrorCode.captureShortcutAlreadyListening",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 49,
+      "symbol": "CloseEventCode",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 50,
+      "symbol": "CloseEventCode.invalidClientID",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 51,
+      "symbol": "CloseEventCode.invalidOrigin",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 52,
+      "symbol": "CloseEventCode.rateLimited",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 53,
+      "symbol": "CloseEventCode.tokenRevoked",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 54,
+      "symbol": "CloseEventCode.invalidVersion",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 55,
+      "symbol": "CloseEventCode.invalidEncoding",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 57,
+      "symbol": "CloseEventCode.socketDisconnected",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 61,
+      "symbol": "CommandType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 62,
+      "symbol": "CommandType.dispatch",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 63,
+      "symbol": "CommandType.authorize",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 64,
+      "symbol": "CommandType.authenticate",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 65,
+      "symbol": "CommandType.getGuild",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 66,
+      "symbol": "CommandType.getGuilds",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 67,
+      "symbol": "CommandType.getChannel",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 68,
+      "symbol": "CommandType.getChannels",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 69,
+      "symbol": "CommandType.subscribe",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 70,
+      "symbol": "CommandType.unsubscribe",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 71,
+      "symbol": "CommandType.setUserVoiceSettings",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 72,
+      "symbol": "CommandType.selectVoiceChannel",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 73,
+      "symbol": "CommandType.getSelectedVoiceChannel",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 74,
+      "symbol": "CommandType.selectTextChannel",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 75,
+      "symbol": "CommandType.getVoiceSettings",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 76,
+      "symbol": "CommandType.setVoiceSettings",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 77,
+      "symbol": "CommandType.captureShortcut",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 78,
+      "symbol": "CommandType.setCertifiedDevices",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 79,
+      "symbol": "CommandType.setActivity",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 80,
+      "symbol": "CommandType.sendActivityJoinInvite",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 81,
+      "symbol": "CommandType.closeActivityRequest",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 85,
+      "symbol": "EventType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 86,
+      "symbol": "EventType.ready",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 87,
+      "symbol": "EventType.error",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 88,
+      "symbol": "EventType.guildStatus",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 89,
+      "symbol": "EventType.guildCreate",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 90,
+      "symbol": "EventType.channelCreate",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 91,
+      "symbol": "EventType.voiceChannelSelect",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 92,
+      "symbol": "EventType.voiceStateCreate",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 93,
+      "symbol": "EventType.voiceStateUpdate",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 94,
+      "symbol": "EventType.voiceStateDelete",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 95,
+      "symbol": "EventType.voiceSettingsUpdate",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 96,
+      "symbol": "EventType.voiceConnectionStatus",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 97,
+      "symbol": "EventType.speakingStart",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 98,
+      "symbol": "EventType.speakingStop",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 99,
+      "symbol": "EventType.messageCreate",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 100,
+      "symbol": "EventType.messageUpdate",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 101,
+      "symbol": "EventType.messageDelete",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 102,
+      "symbol": "EventType.notificationCreate",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 103,
+      "symbol": "EventType.captureShortcutChange",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 104,
+      "symbol": "EventType.activityJoin",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 105,
+      "symbol": "EventType.activitySpectate",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 106,
+      "symbol": "EventType.activityJoinRequest",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 110,
+      "symbol": "UserFlag",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 111,
+      "symbol": "UserFlag.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 112,
+      "symbol": "UserFlag.discordEmployee",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 113,
+      "symbol": "UserFlag.partneredServerOwner",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 114,
+      "symbol": "UserFlag.hypesquadEvents",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 115,
+      "symbol": "UserFlag.bugHunterLevel1",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 116,
+      "symbol": "UserFlag.normalUser",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 117,
+      "symbol": "UserFlag.houseBravery",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 118,
+      "symbol": "UserFlag.houseBrilliance",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 119,
+      "symbol": "UserFlag.houseBalance",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 120,
+      "symbol": "UserFlag.earlySupporter",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 121,
+      "symbol": "UserFlag.teamUser",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 122,
+      "symbol": "UserFlag.bugHunterLevel2",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 123,
+      "symbol": "UserFlag.verifiedBot",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 124,
+      "symbol": "UserFlag.earlyVerifiedBotDeveloper",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 125,
+      "symbol": "UserFlag.discordCertifiedModerator",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 129,
+      "symbol": "PremiumType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 130,
+      "symbol": "PremiumType.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 131,
+      "symbol": "PremiumType.nitroClassic",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Constants.swift",
+      "line": 132,
+      "symbol": "PremiumType.nitro",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Errors.swift",
+      "line": 3,
+      "symbol": "RPCError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Errors.swift",
+      "line": 4,
+      "symbol": "RPCError.appSandboxed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Errors.swift",
+      "line": 5,
+      "symbol": "RPCError.socketCreation(error:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Errors.swift",
+      "line": 6,
+      "symbol": "RPCError.udsNotFound(path:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Errors.swift",
+      "line": 8,
+      "symbol": "RPCError",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Errors.swift",
+      "line": 30,
+      "symbol": "HTTPError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Errors.swift",
+      "line": 31,
+      "symbol": "HTTPError.timeout(timeout:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Errors.swift",
+      "line": 32,
+      "symbol": "HTTPError.failed(code:error:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Errors.swift",
+      "line": 34,
+      "symbol": "HTTPError",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Errors.swift",
+      "line": 51,
+      "symbol": "NonceError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Errors.swift",
+      "line": 52,
+      "symbol": "NonceError.invalid(nonce:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Errors.swift",
+      "line": 54,
+      "symbol": "NonceError",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Errors.swift",
+      "line": 66,
+      "symbol": "RequestError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Errors.swift",
+      "line": 67,
+      "symbol": "RequestError.invalidParameters(reason:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Errors.swift",
+      "line": 69,
+      "symbol": "RequestError",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Errors.swift",
+      "line": 81,
+      "symbol": "CommandError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Errors.swift",
+      "line": 82,
+      "symbol": "CommandError.timeout(timeout:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Errors.swift",
+      "line": 83,
+      "symbol": "CommandError.responseMalformed(response:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Errors.swift",
+      "line": 84,
+      "symbol": "CommandError.failed(code:message:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Errors.swift",
+      "line": 86,
+      "symbol": "CommandError",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/FetchUtils.swift",
+      "line": 5,
+      "symbol": "DiscordRPC.fetchAccessToken(code:timeout:redirectURI:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/FetchUtils.swift",
+      "line": 23,
+      "symbol": "DiscordRPC.fetchRPCToken(timeout:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/FetchUtils.swift",
+      "line": 38,
+      "symbol": "fetchUserAvatarData(id:avatar:timeout:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/FetchUtils.swift",
+      "line": 46,
+      "symbol": "fetchUserAvatarImage(id:avatar:timeout:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Handlers.swift",
+      "line": 4,
+      "symbol": "DiscordRPC.onConnect(handler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Handlers.swift",
+      "line": 10,
+      "symbol": "DiscordRPC.onDisconnect(handler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Handlers.swift",
+      "line": 16,
+      "symbol": "DiscordRPC.onResponse(handler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Handlers.swift",
+      "line": 22,
+      "symbol": "DiscordRPC.onError(handler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Handlers.swift",
+      "line": 28,
+      "symbol": "DiscordRPC.onEvent(handler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/AccessToken.swift",
+      "line": 3,
+      "symbol": "AccessToken",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/AccessToken.swift",
+      "line": 4,
+      "symbol": "AccessToken.refreshToken",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/AccessToken.swift",
+      "line": 5,
+      "symbol": "AccessToken.accessToken",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/AccessToken.swift",
+      "line": 6,
+      "symbol": "AccessToken.expiresIn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/AccessToken.swift",
+      "line": 7,
+      "symbol": "AccessToken.tokenType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/AccessToken.swift",
+      "line": 8,
+      "symbol": "AccessToken.scopes",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/AccessToken.swift",
+      "line": 47,
+      "symbol": "AccessToken.from(data:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Channel.swift",
+      "line": 3,
+      "symbol": "Channel",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Emoji.swift",
+      "line": 3,
+      "symbol": "Emoji",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 3,
+      "symbol": "Guild",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 4,
+      "symbol": "Guild.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 5,
+      "symbol": "Guild.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 6,
+      "symbol": "Guild.icon",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 7,
+      "symbol": "Guild.iconHash",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 8,
+      "symbol": "Guild.splash",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 9,
+      "symbol": "Guild.discoverySplash",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 10,
+      "symbol": "Guild.owner",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 11,
+      "symbol": "Guild.ownerID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 12,
+      "symbol": "Guild.permissions",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 13,
+      "symbol": "Guild.region",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 14,
+      "symbol": "Guild.afkChannelID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 15,
+      "symbol": "Guild.afkTimeout",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 16,
+      "symbol": "Guild.widgetEnabled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 17,
+      "symbol": "Guild.widgetChannelID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 18,
+      "symbol": "Guild.verificationLevel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 19,
+      "symbol": "Guild.defaultMessageNotifications",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 20,
+      "symbol": "Guild.explicitContentFilter",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 21,
+      "symbol": "Guild.roles",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 22,
+      "symbol": "Guild.emojis",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 23,
+      "symbol": "Guild.features",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 24,
+      "symbol": "Guild.mfaLevel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 25,
+      "symbol": "Guild.applicationID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 26,
+      "symbol": "Guild.systemChannelID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 27,
+      "symbol": "Guild.systemChannelFlags",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 28,
+      "symbol": "Guild.rulesChannelID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 29,
+      "symbol": "Guild.joinedAt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 30,
+      "symbol": "Guild.large",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 31,
+      "symbol": "Guild.unavailable",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 32,
+      "symbol": "Guild.memberCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 33,
+      "symbol": "Guild.voiceStates",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 34,
+      "symbol": "Guild.members",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 35,
+      "symbol": "Guild.channels",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 36,
+      "symbol": "Guild.threads",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 37,
+      "symbol": "Guild.presences",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 38,
+      "symbol": "Guild.maxPresences",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 39,
+      "symbol": "Guild.maxMembers",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 40,
+      "symbol": "Guild.vanityUrlCode",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 41,
+      "symbol": "Guild.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 42,
+      "symbol": "Guild.banner",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 43,
+      "symbol": "Guild.premiumTier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 44,
+      "symbol": "Guild.premiumSubscriptionCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 45,
+      "symbol": "Guild.preferredLocale",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 46,
+      "symbol": "Guild.publicUpdatesChannelID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 47,
+      "symbol": "Guild.maxVideoChannelUsers",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 48,
+      "symbol": "Guild.approximateMemberCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 49,
+      "symbol": "Guild.approximatePresenceCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 50,
+      "symbol": "Guild.welcomeScreen",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 51,
+      "symbol": "Guild.nsfwLevel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Guild.swift",
+      "line": 52,
+      "symbol": "Guild.stageInstances",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/GuildFeature.swift",
+      "line": 3,
+      "symbol": "GuildFeature",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/GuildMember.swift",
+      "line": 3,
+      "symbol": "GuildMember",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Presence.swift",
+      "line": 3,
+      "symbol": "Presence",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/Role.swift",
+      "line": 3,
+      "symbol": "Role",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/StageInstance.swift",
+      "line": 3,
+      "symbol": "StageInstance",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/User.swift",
+      "line": 4,
+      "symbol": "User",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/User.swift",
+      "line": 5,
+      "symbol": "User.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/User.swift",
+      "line": 6,
+      "symbol": "User.username",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/User.swift",
+      "line": 7,
+      "symbol": "User.discriminator",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/User.swift",
+      "line": 8,
+      "symbol": "User.avatar",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/User.swift",
+      "line": 9,
+      "symbol": "User.bot",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/User.swift",
+      "line": 10,
+      "symbol": "User.system",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/User.swift",
+      "line": 11,
+      "symbol": "User.mfaEnabled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/User.swift",
+      "line": 12,
+      "symbol": "User.locale",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/User.swift",
+      "line": 13,
+      "symbol": "User.verified",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/User.swift",
+      "line": 14,
+      "symbol": "User.email",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/User.swift",
+      "line": 15,
+      "symbol": "User.flags",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/User.swift",
+      "line": 16,
+      "symbol": "User.premiumType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/User.swift",
+      "line": 17,
+      "symbol": "User.publicFlags",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/User.swift",
+      "line": 35,
+      "symbol": "User.fetchAvatarData(timeout:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/User.swift",
+      "line": 39,
+      "symbol": "User.fetchAvatarImage(timeout:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/VoiceState.swift",
+      "line": 3,
+      "symbol": "VoiceState",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Common/WelcomeScreen.swift",
+      "line": 3,
+      "symbol": "WelcomeScreen",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventClose.swift",
+      "line": 3,
+      "symbol": "EventClose",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventClose.swift",
+      "line": 4,
+      "symbol": "EventClose.code",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventClose.swift",
+      "line": 5,
+      "symbol": "EventClose.message",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventClose.swift",
+      "line": 12,
+      "symbol": "EventClose.from(data:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventError.swift",
+      "line": 3,
+      "symbol": "EventError",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventError.swift",
+      "line": 4,
+      "symbol": "EventError.data",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventError.swift",
+      "line": 16,
+      "symbol": "EventError.encode(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventError.swift",
+      "line": 22,
+      "symbol": "EventError.from(data:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventError.swift",
+      "line": 27,
+      "symbol": "EventErrorData",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventError.swift",
+      "line": 28,
+      "symbol": "EventErrorData.code",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventError.swift",
+      "line": 29,
+      "symbol": "EventErrorData.message",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventReady.swift",
+      "line": 3,
+      "symbol": "EventReady",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventReady.swift",
+      "line": 4,
+      "symbol": "EventReady.data",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventReady.swift",
+      "line": 16,
+      "symbol": "EventReady.encode(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventReady.swift",
+      "line": 22,
+      "symbol": "EventReady.from(data:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventReady.swift",
+      "line": 27,
+      "symbol": "EventReadyData",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventReady.swift",
+      "line": 28,
+      "symbol": "EventReadyData.v",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventReady.swift",
+      "line": 29,
+      "symbol": "EventReadyData.config",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventReady.swift",
+      "line": 30,
+      "symbol": "EventReadyData.user",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventReady.swift",
+      "line": 39,
+      "symbol": "Config",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventReady.swift",
+      "line": 40,
+      "symbol": "Config.cdnHost",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventReady.swift",
+      "line": 41,
+      "symbol": "Config.apiEndpoint",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventReady.swift",
+      "line": 42,
+      "symbol": "Config.environment",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventVoiceChannelSelect.swift",
+      "line": 3,
+      "symbol": "EventVoiceChannelSelect",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventVoiceChannelSelect.swift",
+      "line": 4,
+      "symbol": "EventVoiceChannelSelect.data",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventVoiceChannelSelect.swift",
+      "line": 21,
+      "symbol": "EventVoiceChannelSelect.encode(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventVoiceChannelSelect.swift",
+      "line": 27,
+      "symbol": "EventVoiceChannelSelect.from(data:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventVoiceChannelSelect.swift",
+      "line": 32,
+      "symbol": "EventVoiceChannelSelectData",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventVoiceChannelSelect.swift",
+      "line": 33,
+      "symbol": "EventVoiceChannelSelectData.channelID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Events/EventVoiceChannelSelect.swift",
+      "line": 34,
+      "symbol": "EventVoiceChannelSelectData.guildID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Frame.swift",
+      "line": 3,
+      "symbol": "Frame",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Frame.swift",
+      "line": 4,
+      "symbol": "Frame.cmd",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Frame.swift",
+      "line": 5,
+      "symbol": "Frame.evt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Frame.swift",
+      "line": 6,
+      "symbol": "Frame.nonce",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Frame.swift",
+      "line": 111,
+      "symbol": "Frame.from(data:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/RPCToken.swift",
+      "line": 3,
+      "symbol": "RPCToken",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/RPCToken.swift",
+      "line": 4,
+      "symbol": "RPCToken.rpcToken",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseAuthenticate.swift",
+      "line": 3,
+      "symbol": "ResponseAuthenticate",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseAuthenticate.swift",
+      "line": 4,
+      "symbol": "ResponseAuthenticate.data",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseAuthenticate.swift",
+      "line": 16,
+      "symbol": "ResponseAuthenticate.encode(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseAuthenticate.swift",
+      "line": 22,
+      "symbol": "ResponseAuthenticate.from(data:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseAuthenticate.swift",
+      "line": 27,
+      "symbol": "ResponseAuthenticateData",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseAuthenticate.swift",
+      "line": 28,
+      "symbol": "ResponseAuthenticateData.user",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseAuthenticate.swift",
+      "line": 29,
+      "symbol": "ResponseAuthenticateData.scopes",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseAuthenticate.swift",
+      "line": 30,
+      "symbol": "ResponseAuthenticateData.expires",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseAuthenticate.swift",
+      "line": 31,
+      "symbol": "ResponseAuthenticateData.application",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseAuthenticate.swift",
+      "line": 32,
+      "symbol": "ResponseAuthenticateData.accessToken",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseAuthenticate.swift",
+      "line": 43,
+      "symbol": "OAuth2Application",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseAuthenticate.swift",
+      "line": 44,
+      "symbol": "OAuth2Application.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseAuthenticate.swift",
+      "line": 45,
+      "symbol": "OAuth2Application.summary",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseAuthenticate.swift",
+      "line": 46,
+      "symbol": "OAuth2Application.icon",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseAuthenticate.swift",
+      "line": 47,
+      "symbol": "OAuth2Application.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseAuthenticate.swift",
+      "line": 48,
+      "symbol": "OAuth2Application.rpcOrigins",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseAuthenticate.swift",
+      "line": 49,
+      "symbol": "OAuth2Application.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseAuthenticate.swift",
+      "line": 50,
+      "symbol": "OAuth2Application.hook",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseAuthenticate.swift",
+      "line": 51,
+      "symbol": "OAuth2Application.verifyKey",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseAuthorize.swift",
+      "line": 3,
+      "symbol": "ResponseAuthorize",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseAuthorize.swift",
+      "line": 4,
+      "symbol": "ResponseAuthorize.data",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseAuthorize.swift",
+      "line": 16,
+      "symbol": "ResponseAuthorize.encode(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseAuthorize.swift",
+      "line": 22,
+      "symbol": "ResponseAuthorize.from(data:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseAuthorize.swift",
+      "line": 27,
+      "symbol": "ResponseAuthorizeData",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseAuthorize.swift",
+      "line": 28,
+      "symbol": "ResponseAuthorizeData.code",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseGetGuilds.swift",
+      "line": 3,
+      "symbol": "ResponseGetGuilds",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseGetGuilds.swift",
+      "line": 4,
+      "symbol": "ResponseGetGuilds.data",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseGetGuilds.swift",
+      "line": 16,
+      "symbol": "ResponseGetGuilds.encode(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseGetGuilds.swift",
+      "line": 22,
+      "symbol": "ResponseGetGuilds.from(data:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseGetGuilds.swift",
+      "line": 27,
+      "symbol": "ResponseGetGuildsData",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseGetGuilds.swift",
+      "line": 28,
+      "symbol": "ResponseGetGuildsData.guilds",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseSubscribe.swift",
+      "line": 3,
+      "symbol": "ResponseSubscribe",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseSubscribe.swift",
+      "line": 4,
+      "symbol": "ResponseSubscribe.data",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseSubscribe.swift",
+      "line": 16,
+      "symbol": "ResponseSubscribe.encode(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseSubscribe.swift",
+      "line": 22,
+      "symbol": "ResponseSubscribe.from(data:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseSubscribe.swift",
+      "line": 27,
+      "symbol": "ResponseSubscribeData",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseSubscribe.swift",
+      "line": 28,
+      "symbol": "ResponseSubscribeData.evt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseUnsubscribe.swift",
+      "line": 3,
+      "symbol": "ResponseUnsubscribe",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseUnsubscribe.swift",
+      "line": 16,
+      "symbol": "ResponseUnsubscribe.encode(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/DiscordRPC/DiscordRPC/Sources/Types/Responses/ResponseUnsubscribe.swift",
+      "line": 22,
+      "symbol": "ResponseUnsubscribe.from(data:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/runner/work/DiscordRPC/DiscordRPC"
+}

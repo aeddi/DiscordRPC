@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Guild Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    <link rel="icon" type="image/png" sizes="96x96" href="https://aeddi.github.io/DiscordRPC/img/favicon/96x96.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://aeddi.github.io/DiscordRPC/img/favicon/32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://aeddi.github.io/DiscordRPC/img/favicon/16x16.png">
+
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Guild" class="dashAnchor"></a>
+    <a title="Guild Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">DiscordRPC 1.0.0 Docs</a> (5% documented)</p>
+        <p class="header-right"><a href="https://github.com/aeddi/DiscordRPC"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Faeddi.github.io%2FDiscordRPC%2Fdocsets%2FDiscordRPC.xml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">DiscordRPC Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Guild Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Main%20Class.html">Main Class</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/DiscordRPC.html">DiscordRPC</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Events.html">Events</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/EventClose.html">EventClose</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EventError.html">EventError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EventReady.html">EventReady</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EventVoiceChannelSelect.html">EventVoiceChannelSelect</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Responses.html">Responses</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ResponseAuthenticate.html">ResponseAuthenticate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ResponseAuthorize.html">ResponseAuthorize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ResponseGetGuilds.html">ResponseGetGuilds</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ResponseSubscribe.html">ResponseSubscribe</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ResponseUnsubscribe.html">ResponseUnsubscribe</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Types.html">Types</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AccessToken.html">AccessToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Types.html#/s:10DiscordRPC7ChannelC">Channel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Config.html">Config</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Types.html#/s:10DiscordRPC5EmojiC">Emoji</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Guild.html">Guild</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Types.html#/s:10DiscordRPC12GuildFeatureC">GuildFeature</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Types.html#/s:10DiscordRPC11GuildMemberC">GuildMember</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OAuth2Application.html">OAuth2Application</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Types.html#/s:10DiscordRPC8PresenceC">Presence</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RPCToken.html">RPCToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Types.html#/s:10DiscordRPC4RoleC">Role</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Types.html#/s:10DiscordRPC13StageInstanceC">StageInstance</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/User.html">User</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Types.html#/s:10DiscordRPC10VoiceStateC">VoiceState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Types.html#/s:10DiscordRPC13WelcomeScreenC">WelcomeScreen</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enumerations.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CloseEventCode.html">CloseEventCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CommandType.html">CommandType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ErrorCode.html">ErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/EventType.html">EventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OAuth2Scope.html">OAuth2Scope</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PremiumType.html">PremiumType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/UserFlag.html">UserFlag</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Errors.html">Errors</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CommandError.html">CommandError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HTTPError.html">HTTPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NonceError.html">NonceError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RPCError.html">RPCError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RequestError.html">RequestError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Helpers.html">Helpers</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Helpers.html#/s:10DiscordRPC19fetchUserAvatarData2id6avatar7timeout10Foundation0F0VSS_SSSiSgtKF">fetchUserAvatarData(id:avatar:timeout:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Helpers.html#/s:10DiscordRPC20fetchUserAvatarImage2id6avatar7timeoutSo7NSImageCSS_SSSiSgtKF">fetchUserAvatarImage(id:avatar:timeout:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Helpers.html#/s:10DiscordRPC14newJSONDecoder10Foundation0D0CyF">newJSONDecoder()</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Helpers.html#/s:10DiscordRPC14newJSONEncoder10Foundation0D0CyF">newJSONEncoder()</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/DateFormatter.html">DateFormatter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/EventErrorData.html">EventErrorData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EventReadyData.html">EventReadyData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EventVoiceChannelSelectData.html">EventVoiceChannelSelectData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Frame.html">Frame</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ResponseAuthenticateData.html">ResponseAuthenticateData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ResponseAuthorizeData.html">ResponseAuthorizeData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ResponseGetGuildsData.html">ResponseGetGuildsData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ResponseSubscribeData.html">ResponseSubscribeData</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Guild</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Guild</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+              <div class="slightly-smaller">
+                <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L3-L105">Show on GitHub</a>
+              </div>
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC2idSSvp"></a>
+                    <a name="//apple_ref/swift/Property/id" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC2idSSvp">id</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC4nameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC4nameSSvp">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC4iconSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/icon" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC4iconSSSgvp">icon</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">icon</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC8iconHashSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/iconHash" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC8iconHashSSSgvp">iconHash</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">iconHash</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC6splashSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/splash" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC6splashSSSgvp">splash</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">splash</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC15discoverySplashSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/discoverySplash" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC15discoverySplashSSSgvp">discoverySplash</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">discoverySplash</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC5ownerSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/owner" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC5ownerSbSgvp">owner</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">owner</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC7ownerIDSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/ownerID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC7ownerIDSSSgvp">ownerID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ownerID</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC11permissionsSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/permissions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC11permissionsSSSgvp">permissions</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">permissions</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC6regionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/region" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC6regionSSSgvp">region</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">region</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC12afkChannelIDSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/afkChannelID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC12afkChannelIDSSSgvp">afkChannelID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">afkChannelID</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC10afkTimeoutSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/afkTimeout" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC10afkTimeoutSiSgvp">afkTimeout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">afkTimeout</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC13widgetEnabledSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/widgetEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC13widgetEnabledSbSgvp">widgetEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">widgetEnabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC15widgetChannelIDSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/widgetChannelID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC15widgetChannelIDSSSgvp">widgetChannelID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">widgetChannelID</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC17verificationLevelSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/verificationLevel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC17verificationLevelSiSgvp">verificationLevel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">verificationLevel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC27defaultMessageNotificationsSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/defaultMessageNotifications" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC27defaultMessageNotificationsSiSgvp">defaultMessageNotifications</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">defaultMessageNotifications</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC21explicitContentFilterSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/explicitContentFilter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC21explicitContentFilterSiSgvp">explicitContentFilter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">explicitContentFilter</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC5rolesSayAA4RoleCGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/roles" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC5rolesSayAA4RoleCGSgvp">roles</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">roles</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Types.html#/s:10DiscordRPC4RoleC">Role</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC6emojisSayAA5EmojiCGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/emojis" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC6emojisSayAA5EmojiCGSgvp">emojis</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">emojis</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Types.html#/s:10DiscordRPC5EmojiC">Emoji</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC8featuresSayAA0C7FeatureCGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/features" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC8featuresSayAA0C7FeatureCGSgvp">features</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">features</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Types.html#/s:10DiscordRPC12GuildFeatureC">GuildFeature</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC8mfaLevelSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/mfaLevel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC8mfaLevelSiSgvp">mfaLevel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">mfaLevel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC13applicationIDSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/applicationID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC13applicationIDSSSgvp">applicationID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">applicationID</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC15systemChannelIDSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/systemChannelID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC15systemChannelIDSSSgvp">systemChannelID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">systemChannelID</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC18systemChannelFlagsSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/systemChannelFlags" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC18systemChannelFlagsSiSgvp">systemChannelFlags</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">systemChannelFlags</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC14rulesChannelIDSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/rulesChannelID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC14rulesChannelIDSSSgvp">rulesChannelID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">rulesChannelID</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC8joinedAt10Foundation4DateVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/joinedAt" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC8joinedAt10Foundation4DateVSgvp">joinedAt</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">joinedAt</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC5largeSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/large" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC5largeSbSgvp">large</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">large</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC11unavailableSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/unavailable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC11unavailableSbSgvp">unavailable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">unavailable</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC11memberCountSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/memberCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC11memberCountSiSgvp">memberCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">memberCount</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC11voiceStatesSayAA10VoiceStateCGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/voiceStates" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC11voiceStatesSayAA10VoiceStateCGSgvp">voiceStates</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">voiceStates</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Types.html#/s:10DiscordRPC10VoiceStateC">VoiceState</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC7membersSayAA0C6MemberCGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/members" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC7membersSayAA0C6MemberCGSgvp">members</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">members</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Types.html#/s:10DiscordRPC11GuildMemberC">GuildMember</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC8channelsSayAA7ChannelCGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/channels" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC8channelsSayAA7ChannelCGSgvp">channels</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">channels</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Types.html#/s:10DiscordRPC7ChannelC">Channel</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC7threadsSayAA7ChannelCGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/threads" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC7threadsSayAA7ChannelCGSgvp">threads</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">threads</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Types.html#/s:10DiscordRPC7ChannelC">Channel</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC9presencesSayAA8PresenceCGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/presences" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC9presencesSayAA8PresenceCGSgvp">presences</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">presences</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Types.html#/s:10DiscordRPC8PresenceC">Presence</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC12maxPresencesSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/maxPresences" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC12maxPresencesSiSgvp">maxPresences</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maxPresences</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC10maxMembersSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/maxMembers" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC10maxMembersSiSgvp">maxMembers</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maxMembers</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC13vanityUrlCodeSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/vanityUrlCode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC13vanityUrlCodeSSSgvp">vanityUrlCode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">vanityUrlCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC11descriptionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC11descriptionSSSgvp">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC6bannerSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/banner" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC6bannerSSSgvp">banner</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">banner</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC11premiumTierSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/premiumTier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC11premiumTierSiSgvp">premiumTier</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">premiumTier</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC24premiumSubscriptionCountSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/premiumSubscriptionCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC24premiumSubscriptionCountSiSgvp">premiumSubscriptionCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">premiumSubscriptionCount</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC15preferredLocaleSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/preferredLocale" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC15preferredLocaleSSSgvp">preferredLocale</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">preferredLocale</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC22publicUpdatesChannelIDSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/publicUpdatesChannelID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC22publicUpdatesChannelIDSSSgvp">publicUpdatesChannelID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">publicUpdatesChannelID</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC20maxVideoChannelUsersSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/maxVideoChannelUsers" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC20maxVideoChannelUsersSiSgvp">maxVideoChannelUsers</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">maxVideoChannelUsers</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC22approximateMemberCountSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/approximateMemberCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC22approximateMemberCountSiSgvp">approximateMemberCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">approximateMemberCount</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC24approximatePresenceCountSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/approximatePresenceCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC24approximatePresenceCountSiSgvp">approximatePresenceCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">approximatePresenceCount</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC13welcomeScreenAA07WelcomeE0CSgvp"></a>
+                    <a name="//apple_ref/swift/Property/welcomeScreen" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC13welcomeScreenAA07WelcomeE0CSgvp">welcomeScreen</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">welcomeScreen</span><span class="p">:</span> <span class="kt"><a href="../Types.html#/s:10DiscordRPC13WelcomeScreenC">WelcomeScreen</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC9nsfwLevelSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/nsfwLevel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC9nsfwLevelSiSgvp">nsfwLevel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">nsfwLevel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10DiscordRPC5GuildC14stageInstancesSayAA13StageInstanceCGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/stageInstances" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10DiscordRPC5GuildC14stageInstancesSayAA13StageInstanceCGSgvp">stageInstances</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">stageInstances</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Types.html#/s:10DiscordRPC13StageInstanceC">StageInstance</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/aeddi/DiscordRPC/tree/1.0.0/Sources/Types/Common/Guild.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>© 2021 <a class="link" href="https://github.com/aeddi" target="_blank" rel="external">Antoine Eddi</a> under <a class="link" href="https://github.com/aeddi/DiscordRPC/blob/master/LICENSE" target="_blank" rel="external">MIT License</a></p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
