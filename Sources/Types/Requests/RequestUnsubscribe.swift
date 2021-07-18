@@ -19,10 +19,10 @@ class RequestUnsubscribe: Encodable {
 
         switch evt {
         case .ready, .error:
-            throw RequestError.invalidParameters(reason: "impossible to unsubscribe to \(evt) event")
+            throw CommandError.invalidParameters(reason: "impossible to unsubscribe to \(evt) event")
         case .guildStatus:
             if id == nil {
-                throw RequestError.invalidParameters(reason: "you must provide a guild ID for guild_status event")
+                throw CommandError.invalidParameters(reason: "you must provide a guild ID for guild_status event")
             }
             self.args = try RequestUnsubscribeArgs(guildID: id, channelID: nil)
         case .voiceStateCreate,
@@ -34,12 +34,12 @@ class RequestUnsubscribe: Encodable {
              .speakingStart,
              .speakingStop:
             if id == nil {
-                throw RequestError.invalidParameters(reason: "you must provide a channel ID for \(evt) event")
+                throw CommandError.invalidParameters(reason: "you must provide a channel ID for \(evt) event")
             }
             self.args = try RequestUnsubscribeArgs(guildID: nil, channelID: id)
         default:
             if id != nil {
-                throw RequestError.invalidParameters(reason: "you must not provide any ID for \(evt) event")
+                throw CommandError.invalidParameters(reason: "you must not provide any ID for \(evt) event")
             }
             self.args = nil
         }
@@ -73,7 +73,7 @@ class RequestUnsubscribeArgs: Encodable {
 
     init(guildID: String?, channelID: String?) throws {
         if (guildID == nil && channelID == nil) || (guildID != nil && channelID != nil) {
-            throw RequestError.invalidParameters(reason: "one channelID xor guildID must be provided")
+            throw CommandError.invalidParameters(reason: "one channelID xor guildID must be provided")
         }
 
         self.channelID = channelID

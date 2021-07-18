@@ -8,6 +8,7 @@ root_url: https://aeddi.github.io/DiscordRPC
 copyright: '© 2021 [Antoine Eddi](https://github.com/aeddi) under [MIT License](https://github.com/aeddi/DiscordRPC/blob/master/LICENSE)'
 
 theme: apple
+undocumented_text: ""
 head: |
     <link rel="icon" type="image/png" sizes="96x96" href="https://aeddi.github.io/DiscordRPC/img/favicon/96x96.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://aeddi.github.io/DiscordRPC/img/favicon/32x32.png">
