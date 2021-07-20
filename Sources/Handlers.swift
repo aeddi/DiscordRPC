@@ -41,7 +41,8 @@ extension DiscordRPC {
     /// - Parameter handler:
     ///     A callback that take as parameters:
     ///     - a reference to the related `DiscordRPC` instance
-    ///     - a `nonce` that can be used to determine from wich call this error comes from, knowing that every call to an async command will return a nonce
+    ///     - a `nonce` that can be used to determine from wich call this error comes from, knowing that every call to an async command
+    ///     will return a nonce
     ///     - an `EventError`
     public func onError(
         handler: @escaping (_ rpc: DiscordRPC, _ nonce: String, _ eventError: EventError) -> Void

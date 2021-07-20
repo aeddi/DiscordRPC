@@ -22,8 +22,8 @@ public class ResponseSubscribe: Frame {
     public override class func from(data: Data) throws -> ResponseSubscribe {
         return try newJSONDecoder().decode(ResponseSubscribe.self, from: data)
     }
-}
 
-public class ResponseSubscribeData: Codable {
-    public let evt: EventType
+    public class ResponseSubscribeData: Codable {
+        public let evt: EventType
+    }
 }

@@ -29,7 +29,11 @@ extension DiscordRPC {
         buffer.storeBytes(of: opCode.rawValue, as: UInt32.self)
         buffer.storeBytes(of: UInt32(payload.count), toByteOffset: 4, as: UInt32.self)
 
-        try self.socket?.write(from: buffer.baseAddress!, bufSize: buffer.count)
+        do {
+            try self.socket?.write(from: buffer.baseAddress!, bufSize: buffer.count)
+        } catch {
+            throw RPCError.writeFailed(error: error)
+        }
     }
 
     func receive() {

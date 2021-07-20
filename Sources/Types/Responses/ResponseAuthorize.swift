@@ -22,8 +22,8 @@ public class ResponseAuthorize: Frame {
     public override class func from(data: Data) throws -> ResponseAuthorize {
         return try newJSONDecoder().decode(ResponseAuthorize.self, from: data)
     }
-}
 
-public class ResponseAuthorizeData: Codable {
-    public let code: String
+    public class ResponseAuthorizeData: Codable {
+        public let code: String
+    }
 }

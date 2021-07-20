@@ -9,7 +9,7 @@ class RequestHandshake: Encodable {
         case clientID = "client_id"
     }
 
-    init(clientID: String) throws {
+    init(clientID: String) {
         self.clientID = clientID
     }
 

@@ -1,7 +1,7 @@
 import Foundation
 
 public class ResponseUnsubscribe: Frame {
-    let data: ResponseUnsubscribeData
+    public let data: ResponseUnsubscribeData
 
     private enum CodingKeys: String, CodingKey {
         case data
@@ -22,8 +22,8 @@ public class ResponseUnsubscribe: Frame {
     public override class func from(data: Data) throws -> ResponseUnsubscribe {
         return try newJSONDecoder().decode(ResponseUnsubscribe.self, from: data)
     }
-}
 
-class ResponseUnsubscribeData: Codable {
-    public let evt: EventType
+    public class ResponseUnsubscribeData: Codable {
+        public let evt: EventType
+    }
 }

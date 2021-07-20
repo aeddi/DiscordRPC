@@ -11,9 +11,9 @@ class RequestAuthenticate: Encodable {
         case args
     }
 
-    init(nonce: String, accessToken: String) throws {
+    init(nonce: String, accessToken: String) {
         self.nonce = nonce
-        self.args = try RequestAuthenticateArgs(accessToken: accessToken)
+        self.args = RequestAuthenticateArgs(accessToken: accessToken)
     }
 
     func encode(to encoder: Encoder) throws {
@@ -30,21 +30,22 @@ class RequestAuthenticate: Encodable {
     func jsonString() throws -> String {
         return String(data: try self.jsonData(), encoding: .utf8)!
     }
-}
 
-class RequestAuthenticateArgs: Encodable {
-    let accessToken: String
+    class RequestAuthenticateArgs: Encodable {
+        let accessToken: String
 
-    private enum CodingKeys: String, CodingKey {
-        case accessToken = "access_token"
-    }
+        // swiftlint:disable:next nesting
+        private enum CodingKeys: String, CodingKey {
+            case accessToken = "access_token"
+        }
 
-    init(accessToken: String) throws {
-        self.accessToken = accessToken
-    }
+        init(accessToken: String) {
+            self.accessToken = accessToken
+        }
 
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(accessToken, forKey: .accessToken)
+        func encode(to encoder: Encoder) throws {
+            var container = encoder.container(keyedBy: CodingKeys.self)
+            try container.encode(accessToken, forKey: .accessToken)
+        }
     }
 }

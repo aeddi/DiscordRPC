@@ -22,9 +22,9 @@ public class EventError: Frame {
     public override class func from(data: Data) throws -> EventError {
         return try newJSONDecoder().decode(EventError.self, from: data)
     }
-}
 
-public class EventErrorData: Codable {
-    public let code: ErrorCode
-    public let message: String
+    public class EventErrorData: Codable {
+        public let code: ErrorCode
+        public let message: String
+    }
 }

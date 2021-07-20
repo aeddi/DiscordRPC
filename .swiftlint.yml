@@ -1,5 +1,14 @@
 identifier_name:
   min_length: 1
+
 line_length:
   ignores_urls: true
+  ignores_comments: true
+
 reporter: "github-actions-logging"
+
+excluded:
+  - .build
+
+disabled_rules:
+  - file_length
