@@ -11,7 +11,7 @@ public class User: Codable {
     /// The user's 4-digit discord-tag (require: `OAuth2Scope.identify`)
     public let discriminator: String
     /// The user's avatar hash (require: `OAuth2Scope.identify`)
-    public let avatar: String
+    public let avatar: String?
     /// Whether the user belongs to an OAuth2 application (require: `OAuth2Scope.identify`)
     public let bot: Bool?
     /// Whether the user is an Official Discord System user (part of the urgent message system) (require: `OAuth2Scope.identify`)
@@ -60,7 +60,8 @@ public class User: Codable {
         email: String? = nil,
         flags: UserFlag? = nil,
         premiumType: PremiumType? = nil,
-        publicFlags: UserFlag? = nil) {
+        publicFlags: UserFlag? = nil)
+    {
         self.id = id
         self.username = username
         self.discriminator = discriminator
@@ -77,10 +78,10 @@ public class User: Codable {
     }
 
     public func fetchAvatarData(timeout: Int? = 10000) throws -> Data {
-        return try fetchUserAvatarData(id: self.id, avatar: self.avatar, timeout: timeout)
+        return try fetchUserAvatarData(id: self.id, avatar: self.avatar!, timeout: timeout)
     }
 
     public func fetchAvatarImage(timeout: Int? = 10000) throws -> NSImage {
-        return try fetchUserAvatarImage(id: self.id, avatar: self.avatar, timeout: timeout)
+        return try fetchUserAvatarImage(id: self.id, avatar: self.avatar!, timeout: timeout)
     }
 }

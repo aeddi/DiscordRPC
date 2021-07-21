@@ -76,9 +76,9 @@ public enum ErrorCode: Int, Codable {
     case invalidUser                     = 4010
     /// A standard OAuth2 error occurred; check the data object for the OAuth2 error details.
     case oAuth2Error                     = 5000
-    /// An asynchronous `DiscordRPC.selectTextChannelAsync(channelID:,timeout:)` / `DiscordRPC.selectVoiceChannelAsync(channelID:,timeout:,force:)` command timed out.
+    /// An asynchronous `Session.selectTextChannelAsync(channelID:timeout:)` / `Session.selectVoiceChannelAsync(channelID:timeout:force:)` command timed out.
     case selectChannelTimedOut           = 5001
-    /// An asynchronous `DiscordRPC.getGuildAsync(guildID:,timeout:) `command timed out.
+    /// An asynchronous `Session.getGuildAsync(guildID:timeout:) `command timed out.
     case getGuildTimedOut                = 5002
     /// You tried to join a user to a voice channel but the user was already in one.
     case selectVoiceForceRequired        = 5003

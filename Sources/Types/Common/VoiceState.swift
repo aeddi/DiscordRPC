@@ -7,25 +7,25 @@ public class VoiceState: Codable {
     /// The channel ID this user is connected to.
     public let channelID: String?
     /// The user ID this voice state is for.
-    public let userID: String
+    public let userID: String?
     /// The guild member this voice state is for.
     public let member: GuildMember?
     /// The session ID for this voice state.
-    public let sessionID: String
+    public let sessionID: String?
     /// Whether this user is deafened by the server.
-    public let deaf: Bool
+    public let deaf: Bool?
     /// Whether this user is muted by the server.
-    public let mute: Bool
+    public let mute: Bool?
     /// Whether this user is locally deafened.
-    public let selfDeaf: Bool
+    public let selfDeaf: Bool?
     /// Whether this user is locally muted.
-    public let selfMute: Bool
+    public let selfMute: Bool?
     /// Whether this user is streaming using "Go Live".
     public let selfStream: Bool?
     /// Whether this user's camera is enabled.
-    public let selfVideo: Bool
+    public let selfVideo: Bool?
     /// Whether this user is muted by the current user.
-    public let suppress: Bool
+    public let suppress: Bool?
     /// The time at which the user requested to speak.
     public let requestToSpeakTimestamp: Date?
 

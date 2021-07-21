@@ -1,7 +1,7 @@
 import Foundation
 import Socket
 
-extension DiscordRPC {
+extension Session {
     func createSocket() throws {
         do {
             self.socket = try Socket.create(family: .unix, proto: .unix)
@@ -37,8 +37,12 @@ extension DiscordRPC {
     }
 
     func receive() {
-        self.rpcWorker.async { [unowned self] in
+        self.rpcWorker.async { [weak self] in
             while true {
+                guard let self = self else {
+                    return
+                }
+
                 guard let isConnected = self.socket?.isConnected, isConnected else {
                     self.disconnectHandler?(self, EventClose(code: .socketDisconnected, message: "Socket Disconnected"))
                     return
@@ -119,6 +123,8 @@ extension DiscordRPC {
     private func handleResponse(_ data: Data) {
         do {
             let frame = try Frame.from(data: data)
+            logDebugCommand(commandType: frame.cmd, direction: .response, nonce: frame.nonce!, content: data)
+
             if try isNonceAsync(nonce: frame.nonce!) {
                 self.handlerWorker.async { [unowned self] in
                     self.responseHandler?(self, frame.nonce!, frame.cmd, data)
@@ -164,6 +170,7 @@ extension DiscordRPC {
                 }
 
             default:
+                logDebugEvent(eventType: frame.evt!, content: data)
                 self.handlerWorker.async { [unowned self] in
                     self.eventHandler?(self, frame.evt!, data)
                 }

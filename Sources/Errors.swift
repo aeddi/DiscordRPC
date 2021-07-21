@@ -2,11 +2,11 @@ import Foundation
 
 /// Errors that can occurs during RPC operation.
 public enum RPCError: Error {
-    /// Error thrown by `DiscordRPC.init()` if the app is sandboxed.
+    /// Error thrown by `init(clientID:clientSecret:)` if the app is sandboxed.
     case appSandboxed
-    /// Error thrown by `DiscordRPC.connect()` if the socket creation failed.
+    /// Error thrown by `Session.connect()` if the socket creation failed.
     case socketCreation(error: Error?)
-    /// Error thrown by `DiscordRPC.connect()` if the Discord UDS file was not found.
+    /// Error thrown by `Session.connect()` if the Discord UDS file was not found.
     case udsNotFound(path: String)
     /// Error thrown by any command when a write on the socket failed
     case writeFailed(error: Error)

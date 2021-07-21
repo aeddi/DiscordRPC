@@ -50,7 +50,7 @@ public class Channel: Codable {
     /// Thread-specific fields not needed by other channels
     public let threadMetadata: ThreadMetadata?
     /// Thread member object for the current user, if they have joined the thread, only included on certain API endpoints
-    public let member: ThreadMember
+    public let member: ThreadMember?
     /// Default duration for newly created threads, in minutes, to automatically archive the thread after recent activity, can be set to: 60, 1440, 4320, 10080
     public let defaultAutoArchiveDuration: Int?
     /// Computed permissions for the invoking user in the channel, including overwrites, only included when part of the `resolved` data received on a slash command interaction

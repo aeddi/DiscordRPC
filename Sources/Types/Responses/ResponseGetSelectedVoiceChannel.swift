@@ -1,7 +1,7 @@
 import Foundation
 
 public class ResponseGetSelectedVoiceChannel: Frame {
-    public let data: ResponseGetChannel.ResponseGetChannelData
+    public let data: ResponseGetSelectedVoiceChannelData?
 
     private enum CodingKeys: String, CodingKey {
         case data
@@ -9,7 +9,7 @@ public class ResponseGetSelectedVoiceChannel: Frame {
 
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.data = try container.decode(ResponseGetChannel.ResponseGetChannelData.self, forKey: .data)
+        self.data = try container.decodeIfPresent(ResponseGetSelectedVoiceChannelData.self, forKey: .data)
         try super.init(
             from: decoder,
             withFixedCmdType: .getSelectedVoiceChannel,
@@ -27,4 +27,6 @@ public class ResponseGetSelectedVoiceChannel: Frame {
     public override class func from(data: Data) throws -> ResponseGetSelectedVoiceChannel {
         return try newJSONDecoder().decode(ResponseGetSelectedVoiceChannel.self, from: data)
     }
+
+    public class ResponseGetSelectedVoiceChannelData: ResponseGetChannel.ResponseGetChannelData {}
 }

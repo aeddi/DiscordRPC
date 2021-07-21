@@ -1,7 +1,7 @@
 import Foundation
 
 public class ResponseSelectTextChannel: Frame {
-        public let data: ResponseGetChannel.ResponseGetChannelData
+    public let data: ResponseSelectTextChannelData
 
     private enum CodingKeys: String, CodingKey {
         case data
@@ -9,7 +9,7 @@ public class ResponseSelectTextChannel: Frame {
 
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.data = try container.decode(ResponseGetChannel.ResponseGetChannelData.self, forKey: .data)
+        self.data = try container.decode(ResponseSelectTextChannelData.self, forKey: .data)
         try super.init(from: decoder, withFixedCmdType: .selectTextChannel, withFixedEventType: nil, withNonce: true)
     }
 
@@ -22,4 +22,6 @@ public class ResponseSelectTextChannel: Frame {
     public override class func from(data: Data) throws -> ResponseSelectTextChannel {
         return try newJSONDecoder().decode(ResponseSelectTextChannel.self, from: data)
     }
+
+    public class ResponseSelectTextChannelData: ResponseGetChannel.ResponseGetChannelData {}
 }

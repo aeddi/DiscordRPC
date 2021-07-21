@@ -26,7 +26,8 @@ public class VoiceSettingsMode: Codable {
         autoThreshold: Bool? = nil,
         threshold: Float? = nil,
         shortcut: ShorcutKeyCombo? = nil,
-        delay: Float? = nil) {
+        delay: Float? = nil)
+    {
         self.type = type
         self.autoThreshold = autoThreshold
         self.threshold = threshold

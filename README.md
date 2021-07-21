@@ -51,51 +51,51 @@ on your use case) in the OAuth2 section.
 import DiscordRPC
 import Dispatch
 
-// Instantiate DiscordRPC using client ID and Secret
-let discordRPC = DiscordRPC(clientID: "XXXXXX", clientSecret: "YYYYYY")
+// Instantiate a DiscordRPC Session using client ID and Secret
+let session = Session(clientID: "XXXXXX", clientSecret: "YYYYYY")
 
 // This handler is called as soon as the Discord RPC handshake succeeded
-discordRPC.onConnect { rpc, eventReady in
+session.onConnect { sess, eventReady in
     print("Connection to Discord RPC API succeeded")
 
     do {
         // Ask user authorization by displaying a popup on the Discord client
-        let authorization = try rpc.authorize(oAuth2Scopes: [.rpc])
+        let authorization = try sess.authorize(oAuth2Scopes: [.rpc])
 
         // Request an access token on Discord servers using the authorization code
-        let accessToken = try rpc.fetchAccessToken(code: authorization.data.code)
+        let accessToken = try sess.fetchAccessToken(code: authorization.data.code)
 
         // Authenticate to Discord RPC API using the access token
-        let authentication = try rpc.authenticate(accessToken: accessToken.accessToken)
+        let authentication = try sess.authenticate(accessToken: accessToken.accessToken)
 
         print("Hello \(authentication.data.user.username)! o/")
 
         // Receive an event when the local user select a voice channel
-        _ = try rpc.subscribe(event: .voiceChannelSelect)
+        _ = try sess.subscribe(event: .voiceChannelSelect)
     } catch {
-        rpc.disconnect()
+        sess.disconnect()
         print("Error occured: \(error)")
         exit(42)
     }
 }
 
 // This handler is called when a disconnection with the Discord RPC socket occurs
-discordRPC.onDisconnect { rpc, eventClose in
+session.onDisconnect { sess, eventClose in
     print("Disconnection occurred: [\(eventClose.code)] \(eventClose.message)")
 }
 
 // This handler is called when a response to an async command is received
-discordRPC.onResponse { rpc, nonce, commandType, response in
+session.onResponse { sess, nonce, commandType, response in
     print("Response received for command \(commandType) with nonce: \(nonce)")
 }
 
 // This handler is called when an error for an async command occurs
-discordRPC.onError { rpc, nonce, eventError in
+session.onError { sess, nonce, eventError in
     print("Error occured on command \(eventError.cmd): [\(eventError.data.code)] \(eventError.data.message)")
 }
 
 // This handler is called when an update to a subscribed event is received
-discordRPC.onEvent { rpc, eventType, event in
+session.onEvent { sess, eventType, event in
     print("Event received of type \(eventType))")
 
     // Cast raw event (Data) to SelectVoiceChannelEvent
@@ -112,7 +112,7 @@ discordRPC.onEvent { rpc, eventType, event in
 
 // Init connection
 do {
-    try discordRPC.connect()
+    try session.connect()
     dispatchMain()
 } catch {
     print("An error occured during connection init: \(error)")
@@ -125,7 +125,7 @@ do {
 You can fetch a user avatar on Discord servers using this helper:
 
 ```swift
-let authentication = try rpc.authenticate(accessToken: accessToken.accessToken)
+let authentication = try session.authenticate(accessToken: accessToken.accessToken)
 let user = authentication.data.user
 
 let avatar: NSImage = try user.fetchAvatarImage()
@@ -134,7 +134,7 @@ let avatar: NSImage = try user.fetchAvatarImage()
 Or this one:
 
 ```swift
-let authentication = try rpc.authenticate(accessToken: accessToken.accessToken)
+let authentication = try session.authenticate(accessToken: accessToken.accessToken)
 let user = authentication.data.user
 
 let avatar: NSImage = try fetchUserAvatarImage(id: user.id, avatar: user.avatar)
@@ -146,7 +146,7 @@ To avoid asking authorization to user on each run, you can persist the access
 token (e.g. by using UserDefaults) and pass it directly to `authenticate(accessToken:)`.
 
 ```swift
-func persistentAuthentication(rpc: DiscordRPC) throws -> ResponseAuthenticate {
+func persistentAuthentication(session: Session) throws -> ResponseAuthenticate {
     let defaults = UserDefaults.standard
     let now = Date()
 
@@ -156,15 +156,15 @@ func persistentAuthentication(rpc: DiscordRPC) throws -> ResponseAuthenticate {
         if let accessTokenData = defaults.data(forKey: "token") {
             do {
                 let accessToken = try AccessToken.from(data: accessTokenData)
-                return try rpc.authenticate(accessToken: accessToken.accessToken)
+                return try session.authenticate(accessToken: accessToken.accessToken)
             } catch { /* ignore */ }
         }
     }
 
     // Else request a new token
-    let authorization = try rpc.authorize(oAuth2Scopes: [.rpc])
-    let accessToken = try rpc.fetchAccessToken(code: authorization.data.code)
-    let authentication = try rpc.authenticate(accessToken: accessToken.accessToken)
+    let authorization = try session.authorize(oAuth2Scopes: [.rpc])
+    let accessToken = try session.fetchAccessToken(code: authorization.data.code)
+    let authentication = try session.authenticate(accessToken: accessToken.accessToken)
 
     // Then save it in UserDefaults for the next call
     defaults.set(authentication.data.expires, forKey: "tokenValidity")

@@ -12,3 +12,4 @@ excluded:
 
 disabled_rules:
   - file_length
+  - opening_brace

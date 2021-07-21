@@ -42,7 +42,8 @@ public class Device: Codable {
         echoCancellation: Bool? = nil,
         noiseSuppression: Bool? = nil,
         automaticGainControl: Bool? = nil,
-        hardwareMute: Bool? = nil) {
+        hardwareMute: Bool? = nil)
+    {
         self.type = type
         self.id = id
         self.vendor = vendor

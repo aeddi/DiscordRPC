@@ -1,6 +1,6 @@
 import Foundation
 
-extension DiscordRPC {
+extension Session {
     /// Authorize a new client with your app.
     /// - Parameters:
     ///     - oAuth2Scopes: OAuth2 scopes to authorize
@@ -17,7 +17,8 @@ extension DiscordRPC {
     public func authorize(
         oAuth2Scopes: [OAuth2Scope],
         username: String? = nil,
-        rpcToken: String? = nil) throws -> ResponseAuthorize {
+        rpcToken: String? = nil) throws -> ResponseAuthorize
+    {
         let nonce = generateNonce()
         let request = RequestAuthorize(
             nonce: nonce,
@@ -27,6 +28,7 @@ extension DiscordRPC {
             username: username
         )
         let requestJSON = try request.jsonString()
+        logDebugCommand(commandType: .authorize, direction: .request, nonce: nonce, content: try? request.jsonData())
 
         let response = try syncResponse(requestJSON: requestJSON, nonce: nonce, disableTimeout: true)
         return try ResponseAuthorize.from(data: response)
@@ -38,14 +40,15 @@ extension DiscordRPC {
     ///     - username: Username to create a guest account with if the user does not have Discord
     ///     - rpcToken: One-time use RPC token
     /// - Returns: A nonce `String` used to determine which response / error received on
-    /// `DiscordRPC.onResponse(handler:)` / `DiscordRPC.onError(handler:)` correspond to a call to this command
+    /// `onResponse(handler:)` / `onError(handler:)` correspond to a call to this command
     /// - Throws:
     ///     - `RPCError.writeFailed(error:)`: If the write operation on the socket failed
     ///     - `EncodingError`: If the request encoding failed
     public func authorizeAsync(
         oAuth2Scopes: [OAuth2Scope],
         username: String? = nil,
-        rpcToken: String? = nil) throws -> String {
+        rpcToken: String? = nil) throws -> String
+    {
         let nonce = generateNonce(async: true)
         let request = RequestAuthorize(
             nonce: nonce,
@@ -55,6 +58,7 @@ extension DiscordRPC {
             username: username
         )
         let requestJSON = try request.jsonString()
+        logDebugCommand(commandType: .authorize, direction: .request, nonce: nonce, content: try? request.jsonData())
 
         try self.send(requestJSON, .frame)
         return nonce
@@ -74,6 +78,7 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestAuthenticate(nonce: nonce, accessToken: accessToken)
         let requestJSON = try request.jsonString()
+        logDebugCommand(commandType: .authenticate, direction: .request, nonce: nonce, content: try? request.jsonData())
 
         let response = try syncResponse(requestJSON: requestJSON, nonce: nonce)
         return try ResponseAuthenticate.from(data: response)
@@ -82,7 +87,7 @@ extension DiscordRPC {
     /// Authenticate an existing client with your app asynchronously.
     /// - Parameter accessToken: OAuth2 access token obtained with `fetchAccessToken(code:timeout:redirectURI:)`
     /// - Returns: A nonce `String` used to determine which response / error received on
-    /// `DiscordRPC.onResponse(handler:)` / `DiscordRPC.onError(handler:)` correspond to a call to this command
+    /// `onResponse(handler:)` / `onError(handler:)` correspond to a call to this command
     /// - Throws:
     ///     - `RPCError.writeFailed(error:)`: If the write operation on the socket failed
     ///     - `EncodingError`: If the request encoding failed
@@ -90,6 +95,7 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestAuthenticate(nonce: nonce, accessToken: accessToken)
         let requestJSON = try request.jsonString()
+        logDebugCommand(commandType: .authenticate, direction: .request, nonce: nonce, content: try? request.jsonData())
 
         try self.send(requestJSON, .frame)
         return nonce
@@ -108,6 +114,7 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestGetGuilds(nonce: nonce)
         let requestJSON = try request.jsonString()
+        logDebugCommand(commandType: .getGuilds, direction: .request, nonce: nonce, content: try? request.jsonData())
 
         let response = try syncResponse(requestJSON: requestJSON, nonce: nonce)
         return try ResponseGetGuilds.from(data: response)
@@ -115,7 +122,7 @@ extension DiscordRPC {
 
     /// Retrieve a list of guilds from the client asynchronously.
     /// - Returns: A nonce `String` used to determine which response / error received on
-    /// `DiscordRPC.onResponse(handler:)` / `DiscordRPC.onError(handler:)` correspond to a call to this command
+    /// `onResponse(handler:)` / `onError(handler:)` correspond to a call to this command
     /// - Throws:
     ///     - `RPCError.writeFailed(error:)`: If the write operation on the socket failed
     ///     - `EncodingError`: If the request encoding failed
@@ -123,6 +130,7 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestGetGuilds(nonce: nonce)
         let requestJSON = try request.jsonString()
+        logDebugCommand(commandType: .getGuilds, direction: .request, nonce: nonce, content: try? request.jsonData())
 
         try self.send(requestJSON, .frame)
         return nonce
@@ -144,6 +152,7 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestGetGuild(nonce: nonce, guildID: guildID, timeout: timeout)
         let requestJSON = try request.jsonString()
+        logDebugCommand(commandType: .getGuild, direction: .request, nonce: nonce, content: try? request.jsonData())
 
         let response = try syncResponse(requestJSON: requestJSON, nonce: nonce)
         return try ResponseGetGuild.from(data: response)
@@ -154,7 +163,7 @@ extension DiscordRPC {
     ///     - guildID: ID of the guild to get
     ///     - timeout: Asynchronously get guild with time to wait before timing out
     /// - Returns: A nonce `String` used to determine which response / error received on
-    /// `DiscordRPC.onResponse(handler:)` / `DiscordRPC.onError(handler:)` correspond to a call to this command
+    /// `onResponse(handler:)` / `onError(handler:)` correspond to a call to this command
     /// - Throws:
     ///     - `RPCError.writeFailed(error:)`: If the write operation on the socket failed
     ///     - `EncodingError`: If the request encoding failed
@@ -162,6 +171,7 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestGetGuild(nonce: nonce, guildID: guildID, timeout: timeout)
         let requestJSON = try request.jsonString()
+        logDebugCommand(commandType: .getGuild, direction: .request, nonce: nonce, content: try? request.jsonData())
 
         try self.send(requestJSON, .frame)
         return nonce
@@ -181,6 +191,7 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestGetChannel(nonce: nonce, channelID: channelID)
         let requestJSON = try request.jsonString()
+        logDebugCommand(commandType: .getChannel, direction: .request, nonce: nonce, content: try? request.jsonData())
 
         let response = try syncResponse(requestJSON: requestJSON, nonce: nonce)
         return try ResponseGetChannel.from(data: response)
@@ -189,7 +200,7 @@ extension DiscordRPC {
     /// Retrieve channel information from the client asynchronously.
     /// - Parameter channelID: ID of the channel to get
     /// - Returns: A nonce `String` used to determine which response / error received on
-    /// `DiscordRPC.onResponse(handler:)` / `DiscordRPC.onError(handler:)` correspond to a call to this command
+    /// `onResponse(handler:)` / `onError(handler:)` correspond to a call to this command
     /// - Throws:
     ///     - `RPCError.writeFailed(error:)`: If the write operation on the socket failed
     ///     - `EncodingError`: If the request encoding failed
@@ -197,6 +208,7 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestGetChannel(nonce: nonce, channelID: channelID)
         let requestJSON = try request.jsonString()
+        logDebugCommand(commandType: .getChannel, direction: .request, nonce: nonce, content: try? request.jsonData())
 
         try self.send(requestJSON, .frame)
         return nonce
@@ -216,6 +228,7 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestGetChannels(nonce: nonce, guildID: guildID)
         let requestJSON = try request.jsonString()
+        logDebugCommand(commandType: .getChannels, direction: .request, nonce: nonce, content: try? request.jsonData())
 
         let response = try syncResponse(requestJSON: requestJSON, nonce: nonce)
         return try ResponseGetChannels.from(data: response)
@@ -224,7 +237,7 @@ extension DiscordRPC {
     /// Retrieve a list of channels for a guild from the client asynchronously.
     /// - Parameter guildID: ID of the guild to get channels for
     /// - Returns: A nonce `String` used to determine which response / error received on
-    /// `DiscordRPC.onResponse(handler:)` / `DiscordRPC.onError(handler:)` correspond to a call to this command
+    /// `onResponse(handler:)` / `onError(handler:)` correspond to a call to this command
     /// - Throws:
     ///     - `RPCError.writeFailed(error:)`: If the write operation on the socket failed
     ///     - `EncodingError`: If the request encoding failed
@@ -232,6 +245,7 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestGetChannels(nonce: nonce, guildID: guildID)
         let requestJSON = try request.jsonString()
+        logDebugCommand(commandType: .getChannels, direction: .request, nonce: nonce, content: try? request.jsonData())
 
         try self.send(requestJSON, .frame)
         return nonce
@@ -255,7 +269,8 @@ extension DiscordRPC {
         userID: String,
         pan: Pan?,
         volume: Int?,
-        mute: Bool?) throws -> ResponseSetUserVoiceSettings {
+        mute: Bool?) throws -> ResponseSetUserVoiceSettings
+    {
         let nonce = generateNonce()
         let request = RequestSetUserVoiceSettings(
             nonce: nonce,
@@ -265,6 +280,12 @@ extension DiscordRPC {
             mute: mute
         )
         let requestJSON = try request.jsonString()
+        logDebugCommand(
+            commandType: .setUserVoiceSettings,
+            direction: .request,
+            nonce: nonce,
+            content: try? request.jsonData()
+        )
 
         let response = try syncResponse(requestJSON: requestJSON, nonce: nonce)
         return try ResponseSetUserVoiceSettings.from(data: response)
@@ -277,7 +298,7 @@ extension DiscordRPC {
     ///     - volume: Set the volume of user (defaults to 100, min 0, max 200)
     ///     - mute: Set the mute state of the user
     /// - Returns: A nonce `String` used to determine which response / error received on
-    /// `DiscordRPC.onResponse(handler:)` / `DiscordRPC.onError(handler:)` correspond to a call to this command
+    /// `onResponse(handler:)` / `onError(handler:)` correspond to a call to this command
     /// - Throws:
     ///     - `RPCError.writeFailed(error:)`: If the write operation on the socket failed
     ///     - `EncodingError`: If the request encoding failed
@@ -291,6 +312,12 @@ extension DiscordRPC {
             mute: mute
         )
         let requestJSON = try request.jsonString()
+        logDebugCommand(
+            commandType: .setUserVoiceSettings,
+            direction: .request,
+            nonce: nonce,
+            content: try? request.jsonData()
+        )
 
         try self.send(requestJSON, .frame)
         return nonce
@@ -313,6 +340,12 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestSelectVoiceChannel(nonce: nonce, channelID: channelID, timeout: timeout, force: force)
         let requestJSON = try request.jsonString()
+        logDebugCommand(
+            commandType: .selectVoiceChannel,
+            direction: .request,
+            nonce: nonce,
+            content: try? request.jsonData()
+        )
 
         let response = try syncResponse(requestJSON: requestJSON, nonce: nonce)
         return try ResponseSelectVoiceChannel.from(data: response)
@@ -324,7 +357,7 @@ extension DiscordRPC {
     ///     - timeout: Asynchronously join channel with time to wait before timing out
     ///     - force: Forces a user to join a voice channel
     /// - Returns: A nonce `String` used to determine which response / error received on
-    /// `DiscordRPC.onResponse(handler:)` / `DiscordRPC.onError(handler:)` correspond to a call to this command
+    /// `onResponse(handler:)` / `onError(handler:)` correspond to a call to this command
     /// - Throws:
     ///     - `RPCError.writeFailed(error:)`: If the write operation on the socket failed
     ///     - `EncodingError`: If the request encoding failed
@@ -332,6 +365,12 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestSelectVoiceChannel(nonce: nonce, channelID: channelID, timeout: timeout, force: force)
         let requestJSON = try request.jsonString()
+        logDebugCommand(
+            commandType: .selectVoiceChannel,
+            direction: .request,
+            nonce: nonce,
+            content: try? request.jsonData()
+        )
 
         try self.send(requestJSON, .frame)
         return nonce
@@ -350,6 +389,12 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestGetSelectedVoiceChannel(nonce: nonce)
         let requestJSON = try request.jsonString()
+        logDebugCommand(
+            commandType: .getSelectedVoiceChannel,
+            direction: .request,
+            nonce: nonce,
+            content: try? request.jsonData()
+        )
 
         let response = try syncResponse(requestJSON: requestJSON, nonce: nonce)
         return try ResponseGetSelectedVoiceChannel.from(data: response)
@@ -357,7 +402,7 @@ extension DiscordRPC {
 
     /// Get the current voice channel the client is in asynchronously.
     /// - Returns: A nonce `String` used to determine which response / error received on
-    /// `DiscordRPC.onResponse(handler:)` / `DiscordRPC.onError(handler:)` correspond to a call to this command
+    /// `onResponse(handler:)` / `onError(handler:)` correspond to a call to this command
     /// - Throws:
     ///     - `RPCError.writeFailed(error:)`: If the write operation on the socket failed
     ///     - `EncodingError`: If the request encoding failed
@@ -365,6 +410,12 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestGetSelectedVoiceChannel(nonce: nonce)
         let requestJSON = try request.jsonString()
+        logDebugCommand(
+            commandType: .getSelectedVoiceChannel,
+            direction: .request,
+            nonce: nonce,
+            content: try? request.jsonData()
+        )
 
         try self.send(requestJSON, .frame)
         return nonce
@@ -386,6 +437,12 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestSelectTextChannel(nonce: nonce, channelID: channelID, timeout: timeout)
         let requestJSON = try request.jsonString()
+        logDebugCommand(
+            commandType: .selectTextChannel,
+            direction: .request,
+            nonce: nonce,
+            content: try? request.jsonData()
+        )
 
         let response = try syncResponse(requestJSON: requestJSON, nonce: nonce)
         return try ResponseSelectTextChannel.from(data: response)
@@ -396,7 +453,7 @@ extension DiscordRPC {
     ///     - channelID: Channel id to join (or `nil` to leave)
     ///     - timeout: Asynchronously join channel with time to wait before timing out
     /// - Returns: A nonce `String` used to determine which response / error received on
-    /// `DiscordRPC.onResponse(handler:)` / `DiscordRPC.onError(handler:)` correspond to a call to this command
+    /// `onResponse(handler:)` / `onError(handler:)` correspond to a call to this command
     /// - Throws:
     ///     - `RPCError.writeFailed(error:)`: If the write operation on the socket failed
     ///     - `EncodingError`: If the request encoding failed
@@ -404,6 +461,12 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestSelectTextChannel(nonce: nonce, channelID: channelID, timeout: timeout)
         let requestJSON = try request.jsonString()
+        logDebugCommand(
+            commandType: .selectTextChannel,
+            direction: .request,
+            nonce: nonce,
+            content: try? request.jsonData()
+        )
 
         try self.send(requestJSON, .frame)
         return nonce
@@ -422,6 +485,12 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestGetVoiceSettings(nonce: nonce)
         let requestJSON = try request.jsonString()
+        logDebugCommand(
+            commandType: .getVoiceSettings,
+            direction: .request,
+            nonce: nonce,
+            content: try? request.jsonData()
+        )
 
         let response = try syncResponse(requestJSON: requestJSON, nonce: nonce)
         return try ResponseGetVoiceSettings.from(data: response)
@@ -429,7 +498,7 @@ extension DiscordRPC {
 
     /// Retrieve the client's voice settings asynchronously.
     /// - Returns: A nonce `String` used to determine which response / error received on
-    /// `DiscordRPC.onResponse(handler:)` / `DiscordRPC.onError(handler:)` correspond to a call to this command
+    /// `onResponse(handler:)` / `onError(handler:)` correspond to a call to this command
     /// - Throws:
     ///     - `RPCError.writeFailed(error:)`: If the write operation on the socket failed
     ///     - `EncodingError`: If the request encoding failed
@@ -437,6 +506,12 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestGetVoiceSettings(nonce: nonce)
         let requestJSON = try request.jsonString()
+        logDebugCommand(
+            commandType: .getVoiceSettings,
+            direction: .request,
+            nonce: nonce,
+            content: try? request.jsonData()
+        )
 
         try self.send(requestJSON, .frame)
         return nonce
@@ -456,6 +531,12 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestSetVoiceSettings(nonce: nonce, voiceSettings: voiceSettings)
         let requestJSON = try request.jsonString()
+        logDebugCommand(
+            commandType: .setVoiceSettings,
+            direction: .request,
+            nonce: nonce,
+            content: try? request.jsonData()
+        )
 
         let response = try syncResponse(requestJSON: requestJSON, nonce: nonce)
         return try ResponseSetVoiceSettings.from(data: response)
@@ -464,7 +545,7 @@ extension DiscordRPC {
     /// Set the client's voice settings asynchronously.
     /// - Parameter voiceSettings: Voice settings to set (all fields are optional, only passed ones are updated)
     /// - Returns: A nonce `String` used to determine which response / error received on
-    /// `DiscordRPC.onResponse(handler:)` / `DiscordRPC.onError(handler:)` correspond to a call to this command
+    /// `onResponse(handler:)` / `onError(handler:)` correspond to a call to this command
     /// - Throws:
     ///     - `RPCError.writeFailed(error:)`: If the write operation on the socket failed
     ///     - `EncodingError`: If the request encoding failed
@@ -472,6 +553,12 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestSetVoiceSettings(nonce: nonce, voiceSettings: voiceSettings)
         let requestJSON = try request.jsonString()
+        logDebugCommand(
+            commandType: .setVoiceSettings,
+            direction: .request,
+            nonce: nonce,
+            content: try? request.jsonData()
+        )
 
         try self.send(requestJSON, .frame)
         return nonce
@@ -491,6 +578,12 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestSetCertifiedDevices(nonce: nonce, devices: devices)
         let requestJSON = try request.jsonString()
+        logDebugCommand(
+            commandType: .setCertifiedDevices,
+            direction: .request,
+            nonce: nonce,
+            content: try? request.jsonData()
+        )
 
         let response = try syncResponse(requestJSON: requestJSON, nonce: nonce)
         return try ResponseSetCertifiedDevices.from(data: response)
@@ -499,7 +592,7 @@ extension DiscordRPC {
     /// Send info about certified hardware devices asynchronously.
     /// - Parameter devices: A list of devices for your manufacturer, in order of priority
     /// - Returns: A nonce `String` used to determine which response / error received on
-    /// `DiscordRPC.onResponse(handler:)` / `DiscordRPC.onError(handler:)` correspond to a call to this command
+    /// `onResponse(handler:)` / `onError(handler:)` correspond to a call to this command
     /// - Throws:
     ///     - `RPCError.writeFailed(error:)`: If the write operation on the socket failed
     ///     - `EncodingError`: If the request encoding failed
@@ -507,6 +600,12 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestSetCertifiedDevices(nonce: nonce, devices: devices)
         let requestJSON = try request.jsonString()
+        logDebugCommand(
+            commandType: .setCertifiedDevices,
+            direction: .request,
+            nonce: nonce,
+            content: try? request.jsonData()
+        )
 
         try self.send(requestJSON, .frame)
         return nonce
@@ -528,6 +627,7 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestSetActivity(nonce: nonce, pid: pid, activity: activity)
         let requestJSON = try request.jsonString()
+        logDebugCommand(commandType: .setActivity, direction: .request, nonce: nonce, content: try? request.jsonData())
 
         let response = try syncResponse(requestJSON: requestJSON, nonce: nonce)
         return try ResponseSetActivity.from(data: response)
@@ -538,7 +638,7 @@ extension DiscordRPC {
     ///     - pid: The application's process ID
     ///     - activity: The Rich Presence to assign to the user
     /// - Returns: A nonce `String` used to determine which response / error received on
-    /// `DiscordRPC.onResponse(handler:)` / `DiscordRPC.onError(handler:)` correspond to a call to this command
+    /// `onResponse(handler:)` / `onError(handler:)` correspond to a call to this command
     /// - Throws:
     ///     - `RPCError.writeFailed(error:)`: If the write operation on the socket failed
     ///     - `EncodingError`: If the request encoding failed
@@ -546,6 +646,7 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestSetActivity(nonce: nonce, pid: pid, activity: activity)
         let requestJSON = try request.jsonString()
+        logDebugCommand(commandType: .setActivity, direction: .request, nonce: nonce, content: try? request.jsonData())
 
         try self.send(requestJSON, .frame)
         return nonce
@@ -565,6 +666,12 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestSendActivityJoinInvite(nonce: nonce, userID: userID)
         let requestJSON = try request.jsonString()
+        logDebugCommand(
+            commandType: .sendActivityJoinInvite,
+            direction: .request,
+            nonce: nonce,
+            content: try? request.jsonData()
+        )
 
         let response = try syncResponse(requestJSON: requestJSON, nonce: nonce)
         return try ResponseSendActivityJoinInvite.from(data: response)
@@ -573,7 +680,7 @@ extension DiscordRPC {
     /// Consent to a Rich Presence Ask to Join request asynchronously.
     /// - Parameter userID: The ID of the requesting user
     /// - Returns: A nonce `String` used to determine which response / error received on
-    /// `DiscordRPC.onResponse(handler:)` / `DiscordRPC.onError(handler:)` correspond to a call to this command
+    /// `onResponse(handler:)` / `onError(handler:)` correspond to a call to this command
     /// - Throws:
     ///     - `RPCError.writeFailed(error:)`: If the write operation on the socket failed
     ///     - `EncodingError`: If the request encoding failed
@@ -581,6 +688,12 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestSendActivityJoinInvite(nonce: nonce, userID: userID)
         let requestJSON = try request.jsonString()
+        logDebugCommand(
+            commandType: .sendActivityJoinInvite,
+            direction: .request,
+            nonce: nonce,
+            content: try? request.jsonData()
+        )
 
         try self.send(requestJSON, .frame)
         return nonce
@@ -600,6 +713,12 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestCloseActivityRequest(nonce: nonce, userID: userID)
         let requestJSON = try request.jsonString()
+        logDebugCommand(
+            commandType: .closeActivityRequest,
+            direction: .request,
+            nonce: nonce,
+            content: try? request.jsonData()
+        )
 
         let response = try syncResponse(requestJSON: requestJSON, nonce: nonce)
         return try ResponseCloseActivityRequest.from(data: response)
@@ -608,7 +727,7 @@ extension DiscordRPC {
     /// Reject a Rich Presence Ask to Join request asynchronously.
     /// - Parameter userID: The ID of the requesting user
     /// - Returns: A nonce `String` used to determine which response / error received on
-    /// `DiscordRPC.onResponse(handler:)` / `DiscordRPC.onError(handler:)` correspond to a call to this command
+    /// `onResponse(handler:)` / `onError(handler:)` correspond to a call to this command
     /// - Throws:
     ///     - `RPCError.writeFailed(error:)`: If the write operation on the socket failed 
     ///     - `EncodingError`: If the request encoding failed
@@ -616,6 +735,12 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = RequestCloseActivityRequest(nonce: nonce, userID: userID)
         let requestJSON = try request.jsonString()
+        logDebugCommand(
+            commandType: .closeActivityRequest,
+            direction: .request,
+            nonce: nonce,
+            content: try? request.jsonData()
+        )
 
         try self.send(requestJSON, .frame)
         return nonce
@@ -642,6 +767,7 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = try RequestSubscribe(evt: event, nonce: nonce, id: id)
         let requestJSON = try request.jsonString()
+        logDebugCommand(commandType: .subscribe, direction: .request, nonce: nonce, content: try? request.jsonData())
 
         let response = try syncResponse(requestJSON: requestJSON, nonce: nonce)
         return try ResponseSubscribe.from(data: response)
@@ -656,7 +782,7 @@ extension DiscordRPC {
     ///         `EventType.messageDelete`, `EventType.speakingStart`, `EventType.speakingStop`
     ///         - A guild ID is required for this event type: `EventType.guildStatus`
     /// - Returns: A nonce `String` used to determine which response / error received on
-    /// `DiscordRPC.onResponse(handler:)` / `DiscordRPC.onError(handler:)` correspond to a call to this command
+    /// `onResponse(handler:)` / `onError(handler:)` correspond to a call to this command
     /// - Throws:
     ///     - `CommandError.invalidParameters(reason:)`: If the ID is not passed according to the event type
     ///     - `RPCError.writeFailed(error:)`: If the write operation on the socket failed
@@ -665,6 +791,7 @@ extension DiscordRPC {
         let nonce = generateNonce(async: true)
         let request = try RequestSubscribe(evt: event, nonce: nonce, id: id)
         let requestJSON = try request.jsonString()
+        logDebugCommand(commandType: .subscribe, direction: .request, nonce: nonce, content: try? request.jsonData())
 
         try self.send(requestJSON, .frame)
         return nonce
@@ -691,6 +818,7 @@ extension DiscordRPC {
         let nonce = generateNonce()
         let request = try RequestUnsubscribe(evt: event, nonce: nonce, id: id)
         let requestJSON = try request.jsonString()
+        logDebugCommand(commandType: .unsubscribe, direction: .request, nonce: nonce, content: try? request.jsonData())
 
         let response = try syncResponse(requestJSON: requestJSON, nonce: nonce)
         return try ResponseUnsubscribe.from(data: response)
@@ -705,7 +833,7 @@ extension DiscordRPC {
     ///         `EventType.messageDelete`, `EventType.speakingStart`, `EventType.speakingStop`
     ///         - A guild ID is required for this event type: `EventType.guildStatus`
     /// - Returns: A nonce `String` used to determine which response / error received on
-    /// `DiscordRPC.onResponse(handler:)` / `DiscordRPC.onError(handler:)` correspond to a call to this command
+    /// `onResponse(handler:)` / `onError(handler:)` correspond to a call to this command
     /// - Throws:
     ///     - `CommandError.invalidParameters(reason:)`: If the ID is not passed according to the event type
     ///     - `RPCError.writeFailed(error:)`: If the write operation on the socket failed     
@@ -714,6 +842,7 @@ extension DiscordRPC {
         let nonce = generateNonce(async: true)
         let request = try RequestUnsubscribe(evt: event, nonce: nonce, id: id)
         let requestJSON = try request.jsonString()
+        logDebugCommand(commandType: .unsubscribe, direction: .request, nonce: nonce, content: try? request.jsonData())
 
         try self.send(requestJSON, .frame)
         return nonce

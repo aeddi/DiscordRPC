@@ -34,11 +34,11 @@ public class EventVoiceConnectionStatus: Frame {
         /// Hostname of the connected voice server
         public let hostname: String
         /// Last 20 pings (in ms)
-        public let pings: [Int]
+        public let pings: [Int]?
         /// Average ping (in ms)
-        public let averagePing: Int
+        public let averagePing: Float
         /// Last ping (in ms)
-        public let lastPing: Int
+        public let lastPing: Int?
 
         // swiftlint:disable:next nesting
         enum CodingKeys: String, CodingKey {

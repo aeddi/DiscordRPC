@@ -38,7 +38,8 @@ public class Emoji: Codable {
         requireColons: Bool? = nil,
         managed: Bool? = nil,
         animated: Bool? = nil,
-        available: Bool? = nil) {
+        available: Bool? = nil)
+    {
         self.id = id
         self.name = name
         self.roles = roles

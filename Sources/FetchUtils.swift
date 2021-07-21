@@ -1,7 +1,7 @@
 import Foundation
 import AppKit
 
-extension DiscordRPC {
+extension Session {
     /// Fetch from Discord servers the avatar of an user as a raw `Data`
     /// - Parameters:
     ///     - id: The ID of the user
@@ -91,7 +91,8 @@ func httpRequest(
     method: String,
     timeout: Int?,
     headers: [String: String] = [:],
-    parameters: [String: Any] = [:]) throws -> Data {
+    parameters: [String: Any] = [:]) throws -> Data
+{
     let semaphore = DispatchSemaphore(value: 0)
     var response: Data?
     var error: Error?

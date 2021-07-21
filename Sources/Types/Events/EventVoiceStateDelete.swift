@@ -1,7 +1,7 @@
 import Foundation
 
 public class EventVoiceStateDelete: Frame {
-    public let data: EventVoiceStateDeleteData
+    public let data: UserVoiceState
 
     private enum CodingKeys: String, CodingKey {
         case data
@@ -9,7 +9,7 @@ public class EventVoiceStateDelete: Frame {
 
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.data = try container.decode(EventVoiceStateDeleteData.self, forKey: .data)
+        self.data = try container.decode(UserVoiceState.self, forKey: .data)
         try super.init(
             from: decoder,
             withFixedCmdType: .dispatch,
@@ -26,24 +26,5 @@ public class EventVoiceStateDelete: Frame {
 
     public override class func from(data: Data) throws -> EventVoiceStateDelete {
         return try newJSONDecoder().decode(EventVoiceStateDelete.self, from: data)
-    }
-
-    public class EventVoiceStateDeleteData: Codable {
-        public let voiceState: VoiceState
-        public let user: User
-        public let nick: String?
-        public let volume: Int?
-        public let mute: Bool?
-        public let pan: Pan?
-
-        // swiftlint:disable:next nesting
-        enum CodingKeys: String, CodingKey {
-            case voiceState = "voice_state"
-            case user
-            case nick
-            case volume
-            case mute
-            case pan
-        }
     }
 }

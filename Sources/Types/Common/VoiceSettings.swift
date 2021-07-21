@@ -46,7 +46,8 @@ public class VoiceSettings: Codable {
         qos: Bool? = nil,
         silenceWarning: Bool? = nil,
         deaf: Bool? = nil,
-        mute: Bool? = nil) {
+        mute: Bool? = nil)
+    {
         self.input = input
         self.output = output
         self.mode = mode

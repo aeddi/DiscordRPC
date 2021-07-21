@@ -66,7 +66,8 @@ public class Activity: Codable {
         secrets: Activity.ActivitySecrets? = nil,
         instance: Bool? = nil,
         flags: Int? = nil,
-        buttons: [Activity.ActivityButton]? = nil) {
+        buttons: [Activity.ActivityButton]? = nil)
+    {
         self.name = name
         self.type = type
         self.url = url

@@ -1,7 +1,7 @@
 import Foundation
 
 public class ResponseGetChannel: Frame {
-    public let data: ResponseGetChannelData
+    public let data: ResponseGetChannelData?
 
     private enum CodingKeys: String, CodingKey {
         case data
@@ -9,7 +9,7 @@ public class ResponseGetChannel: Frame {
 
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.data = try container.decode(ResponseGetChannelData.self, forKey: .data)
+        self.data = try container.decodeIfPresent(ResponseGetChannelData.self, forKey: .data)
         try super.init(from: decoder, withFixedCmdType: .getChannel, withFixedEventType: nil, withNonce: true)
     }
 
@@ -42,7 +42,7 @@ public class ResponseGetChannel: Frame {
         /// Position of channel in channel list
         public let position: Int
         /// (voice) channel's voice states
-        public let voiceStates: [VoiceState]
+        public let voiceStates: [UserVoiceState]
         /// (text) channel's messages
         public let messages: [Message]
 

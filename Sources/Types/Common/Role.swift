@@ -31,7 +31,8 @@ public class Role: Codable {
         permissions: String,
         managed: Bool,
         mentionable: Bool,
-        tags: Role.RoleTags? = nil) {
+        tags: Role.RoleTags? = nil)
+    {
         self.id = id
         self.name = name
         self.color = color
@@ -62,7 +63,8 @@ public class Role: Codable {
         public init(
             botID: String? = nil,
             integrationID: String? = nil,
-            premiumSubscriber: Bool? = nil) {
+            premiumSubscriber: Bool? = nil)
+        {
             self.botID = botID
             self.integrationID = integrationID
             self.premiumSubscriber = premiumSubscriber
