@@ -1,9 +1,15 @@
 import Foundation
 
+/// Errors that can occurs during RPC operation.
 public enum RPCError: Error {
+    /// Error thrown by `init(clientID:clientSecret:)` if the app is sandboxed.
     case appSandboxed
+    /// Error thrown by `Session.connect()` if the socket creation failed.
     case socketCreation(error: Error?)
+    /// Error thrown by `Session.connect()` if the Discord UDS file was not found.
     case udsNotFound(path: String)
+    /// Error thrown by any command when a write on the socket failed
+    case writeFailed(error: Error)
 }
 extension RPCError: LocalizedError {
     public var errorDescription: String? {
@@ -23,12 +29,20 @@ extension RPCError: LocalizedError {
                 "Discord Unix Domain Socket not found in path: \(path)",
                 comment: ""
             )
+        case .writeFailed(let error):
+            return NSLocalizedString(
+                "Write on socket failed with error: \(error.localizedDescription)",
+                comment: ""
+            )
         }
     }
 }
 
+/// Errors that can occurs during HTTP request.
 public enum HTTPError: Error {
+    /// Error thrown if the time limit for a request is exceeded.
     case timeout(timeout: Int)
+    /// Error thrown if a request failed.
     case failed(code: Int?, error: Error?)
 }
 extension HTTPError: LocalizedError {
@@ -48,7 +62,9 @@ extension HTTPError: LocalizedError {
     }
 }
 
+/// Errors that can occurs during nonce validation.
 public enum NonceError: Error {
+    /// Errors thrown if a nonce is invalid.
     case invalid(nonce: String)
 }
 extension NonceError: LocalizedError {
@@ -63,25 +79,16 @@ extension NonceError: LocalizedError {
     }
 }
 
-public enum RequestError: Error {
-    case invalidParameters(reason: String)
-}
-extension RequestError: LocalizedError {
-    public var errorDescription: String? {
-        switch self {
-        case .invalidParameters(let reason):
-            return NSLocalizedString(
-                "Invalid parameters: \(reason)",
-                comment: ""
-            )
-        }
-    }
-}
-
+/// Errors that can occurs during call to an RPC command.
 public enum CommandError: Error {
+    /// Error thrown if the time limit for a sync command is exceeded.
     case timeout(timeout: Int)
+    /// Error thrown if the response received by a sync command is malformed.
     case responseMalformed(response: Notification?)
+    /// Error thrown if a sync command failed.
     case failed(code: ErrorCode, message: String)
+    /// Errors thrown if the passed parameters are invalid.
+    case invalidParameters(reason: String)
 }
 extension CommandError: LocalizedError {
     public var errorDescription: String? {
@@ -99,6 +106,11 @@ extension CommandError: LocalizedError {
         case .failed(let code, let message):
             return NSLocalizedString(
                 "Command returned an error (\(code)): \(message)",
+                comment: ""
+            )
+        case .invalidParameters(let reason):
+            return NSLocalizedString(
+                "Invalid parameters: \(reason)",
                 comment: ""
             )
         }

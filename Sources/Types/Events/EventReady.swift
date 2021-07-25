@@ -22,28 +22,17 @@ public class EventReady: Frame {
     public override class func from(data: Data) throws -> EventReady {
         return try newJSONDecoder().decode(EventReady.self, from: data)
     }
-}
 
-public class EventReadyData: Codable {
-    public let v: Int
-    public let config: Config
-    public let user: User
+    public class EventReadyData: Codable {
+        public let v: Int
+        public let config: Config
+        public let user: User
 
-    enum CodingKeys: String, CodingKey {
-        case v
-        case config
-        case user
-    }
-}
-
-public class Config: Codable {
-    public let cdnHost: String
-    public let apiEndpoint: String
-    public let environment: String
-
-    private enum CodingKeys: String, CodingKey {
-        case cdnHost     = "cdn_host"
-        case apiEndpoint = "api_endpoint"
-        case environment
+        // swiftlint:disable:next nesting
+        enum CodingKeys: String, CodingKey {
+            case v
+            case config
+            case user
+        }
     }
 }

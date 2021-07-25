@@ -10,7 +10,7 @@ public class ResponseGetGuilds: Frame {
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.data = try container.decode(ResponseGetGuildsData.self, forKey: .data)
-        try super.init(from: decoder, withFixedCmdType: .authenticate, withFixedEventType: nil, withNonce: true)
+        try super.init(from: decoder, withFixedCmdType: .getGuilds, withFixedEventType: nil, withNonce: true)
     }
 
     public override func encode(to encoder: Encoder) throws {
@@ -22,8 +22,8 @@ public class ResponseGetGuilds: Frame {
     public override class func from(data: Data) throws -> ResponseGetGuilds {
         return try newJSONDecoder().decode(ResponseGetGuilds.self, from: data)
     }
-}
 
-public class ResponseGetGuildsData: Codable {
-    public let guilds: [Guild]
+    public class ResponseGetGuildsData: Codable {
+        public let guilds: [Guild]
+    }
 }

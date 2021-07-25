@@ -1,7 +1,16 @@
 import Foundation
 import AppKit
 
-extension DiscordRPC {
+extension Session {
+    /// Fetch from Discord servers the avatar of an user as a raw `Data`
+    /// - Parameters:
+    ///     - id: The ID of the user
+    ///     - avatar: The avatar ID of the user
+    ///     - timeout: The time limit in milliseconds for the request to finish (optional, default: 10000)
+    /// - Returns: A raw `Data` of the user avatar
+    /// - Throws:
+    ///     - `HTTPError.timeout(timeout:)`: If the time limit is exceeded
+    ///     - `HTTPError.failed(code:error:)`: If the request failed
     public func fetchAccessToken(code: String, timeout: Int? = 10000, redirectURI: String = "") throws -> AccessToken {
         let response = try httpRequest(
             endpoint: "https://discord.com/api/oauth2/token",
@@ -19,7 +28,16 @@ extension DiscordRPC {
         return try AccessToken.from(data: response)
     }
 
-    // Seems to be outdated, see: https://github.com/discord/discord-api-docs/issues/2700#issuecomment-797700709
+    /// Fetch from Discord servers the avatar of an user as a raw `Data`.
+    /// - Parameters:
+    ///     - id: The ID of the user
+    ///     - avatar: The avatar ID of the user
+    ///     - timeout: The time limit in milliseconds for the request to finish (optional, default: 10000)
+    /// - Returns: A raw `Data` of the user avatar
+    /// - Throws:
+    ///     - `HTTPError.timeout(timeout:)`: If the time limit is exceeded
+    ///     - `HTTPError.failed(code:error:)`: If the request failed
+    /// - Warning: Seems to be outdated, see: https://github.com/discord/discord-api-docs/issues/2700#issuecomment-797700709
     public func fetchRPCToken(timeout: Int? = 10000) throws -> RPCToken {
         let response = try httpRequest(
             endpoint: "https://discord.com/api/oauth2/token/rpc",
@@ -35,6 +53,15 @@ extension DiscordRPC {
     }
 }
 
+/// Fetch from Discord servers the avatar of an user as a raw `Data`.
+/// - Parameters:
+///     - id: The ID of the user
+///     - avatar: The avatar ID of the user
+///     - timeout: The time limit in milliseconds for the request to finish (optional, default: 10000)
+/// - Returns: A raw `Data` of the user avatar
+/// - Throws:
+///     - `HTTPError.timeout(timeout:)`: If the time limit is exceeded
+///     - `HTTPError.failed(code:error:)`: If the request failed
 public func fetchUserAvatarData(id: String, avatar: String, timeout: Int? = 10000) throws -> Data {
     return try httpRequest(
         endpoint: "https://cdn.discordapp.com/avatars/\(id)/\(avatar).png",
@@ -43,17 +70,29 @@ public func fetchUserAvatarData(id: String, avatar: String, timeout: Int? = 1000
     )
 }
 
+/// Fetch from Discord servers the avatar of an user as an `NSImage`.
+/// - Parameters:
+///     - id: The ID of the user
+///     - avatar: The avatar ID of the user
+///     - timeout: The time limit in milliseconds for the request to finish (optional, default: 10000)
+/// - Returns: An `NSImage` of the user avatar
+/// - Throws:
+///     - `HTTPError.timeout(timeout:)`: If the time limit is exceeded
+///     - `HTTPError.failed(code:error:)`: If the request failed
 public func fetchUserAvatarImage(id: String, avatar: String, timeout: Int? = 10000) throws -> NSImage {
     return NSImage(data: try fetchUserAvatarData(id: id, avatar: avatar, timeout: timeout))!
 }
 
-// Internal methods
+// ---------------- //
+// Internal methods //
+// ---------------- //
 func httpRequest(
     endpoint: String,
     method: String,
     timeout: Int?,
     headers: [String: String] = [:],
-    parameters: [String: Any] = [:]) throws -> Data {
+    parameters: [String: Any] = [:]) throws -> Data
+{
     let semaphore = DispatchSemaphore(value: 0)
     var response: Data?
     var error: Error?

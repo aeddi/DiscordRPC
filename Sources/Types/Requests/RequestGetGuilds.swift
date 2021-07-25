@@ -11,7 +11,7 @@ class RequestGetGuilds: Encodable {
         case args
     }
 
-    init(nonce: String) throws {
+    init(nonce: String) {
         self.nonce = nonce
     }
 
@@ -29,6 +29,6 @@ class RequestGetGuilds: Encodable {
     func jsonString() throws -> String {
         return String(data: try self.jsonData(), encoding: .utf8)!
     }
-}
 
-struct RequestGetGuildsArgs: Encodable {}
+    struct RequestGetGuildsArgs: Encodable {}
+}

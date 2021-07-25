@@ -19,10 +19,10 @@ class RequestUnsubscribe: Encodable {
 
         switch evt {
         case .ready, .error:
-            throw RequestError.invalidParameters(reason: "impossible to unsubscribe to \(evt) event")
+            throw CommandError.invalidParameters(reason: "impossible to unsubscribe to \(evt) event")
         case .guildStatus:
             if id == nil {
-                throw RequestError.invalidParameters(reason: "you must provide a guild ID for guild_status event")
+                throw CommandError.invalidParameters(reason: "you must provide a guild ID for guild_status event")
             }
             self.args = try RequestUnsubscribeArgs(guildID: id, channelID: nil)
         case .voiceStateCreate,
@@ -34,12 +34,12 @@ class RequestUnsubscribe: Encodable {
              .speakingStart,
              .speakingStop:
             if id == nil {
-                throw RequestError.invalidParameters(reason: "you must provide a channel ID for \(evt) event")
+                throw CommandError.invalidParameters(reason: "you must provide a channel ID for \(evt) event")
             }
             self.args = try RequestUnsubscribeArgs(guildID: nil, channelID: id)
         default:
             if id != nil {
-                throw RequestError.invalidParameters(reason: "you must not provide any ID for \(evt) event")
+                throw CommandError.invalidParameters(reason: "you must not provide any ID for \(evt) event")
             }
             self.args = nil
         }
@@ -60,29 +60,30 @@ class RequestUnsubscribe: Encodable {
     func jsonString() throws -> String {
         return String(data: try self.jsonData(), encoding: .utf8)!
     }
-}
 
-class RequestUnsubscribeArgs: Encodable {
-    let guildID: String?
-    let channelID: String?
+    class RequestUnsubscribeArgs: Encodable {
+        let guildID: String?
+        let channelID: String?
 
-    private enum CodingKeys: String, CodingKey {
-        case guildID = "guild_id"
-        case channelID = "channel_id"
-    }
-
-    init(guildID: String?, channelID: String?) throws {
-        if (guildID == nil && channelID == nil) || (guildID != nil && channelID != nil) {
-            throw RequestError.invalidParameters(reason: "one channelID xor guildID must be provided")
+        // swiftlint:disable:next nesting
+        private enum CodingKeys: String, CodingKey {
+            case guildID = "guild_id"
+            case channelID = "channel_id"
         }
 
-        self.channelID = channelID
-        self.guildID = guildID
-    }
+        init(guildID: String?, channelID: String?) throws {
+            if (guildID == nil && channelID == nil) || (guildID != nil && channelID != nil) {
+                throw CommandError.invalidParameters(reason: "one channelID xor guildID must be provided")
+            }
 
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        if self.guildID != nil { try container.encode(guildID, forKey: .guildID) }
-        if self.channelID != nil { try container.encode(channelID, forKey: .channelID) }
+            self.channelID = channelID
+            self.guildID = guildID
+        }
+
+        func encode(to encoder: Encoder) throws {
+            var container = encoder.container(keyedBy: CodingKeys.self)
+            if self.guildID != nil { try container.encode(guildID, forKey: .guildID) }
+            if self.channelID != nil { try container.encode(channelID, forKey: .channelID) }
+        }
     }
 }

@@ -8,6 +8,10 @@ root_url: https://aeddi.github.io/DiscordRPC
 copyright: '© 2021 [Antoine Eddi](https://github.com/aeddi) under [MIT License](https://github.com/aeddi/DiscordRPC/blob/master/LICENSE)'
 
 theme: apple
+undocumented_text: ""
+hide_unlisted_documentation: true
+hide_documentation_coverage: true
+
 head: |
     <link rel="icon" type="image/png" sizes="96x96" href="https://aeddi.github.io/DiscordRPC/img/favicon/96x96.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://aeddi.github.io/DiscordRPC/img/favicon/32x32.png">
@@ -16,50 +20,124 @@ head: |
 custom_categories:
   - name: Main Class
     children:
-    - DiscordRPC
+    - Session
 
   - name: Events
     children:
+    - EventActivityJoin
+    - EventActivityJoinRequest
+    - EventActivitySpectate
+    - EventChannelCreate
     - EventClose
     - EventError
+    - EventGuildCreate
+    - EventGuildStatus
+    - EventMessageCreate
+    - EventMessageDelete
+    - EventMessageUpdate
+    - EventNotificationCreate
     - EventReady
+    - EventSpeakingStart
+    - EventSpeakingStop
+    - EventVoiceConnectionStatus
     - EventVoiceChannelSelect
+    - EventVoiceSettingsUpdate
+    - EventVoiceStateCreate
+    - EventVoiceStateDelete
+    - EventVoiceStateUpdate
 
   - name: Responses
     children:
     - ResponseAuthenticate
     - ResponseAuthorize
+    - ResponseCloseActivityRequest
+    - ResponseGetChannel
+    - ResponseGetChannels
+    - ResponseGetGuild
     - ResponseGetGuilds
+    - ResponseGetSelectedVoiceChannel
+    - ResponseGetVoiceSettings
+    - ResponseSelectTextChannel
+    - ResponseSelectVoiceChannel
+    - ResponseSendActivityJoinInvite
+    - ResponseSetActivity
+    - ResponseSetCertifiedDevices
+    - ResponseSetUserVoiceSettings
+    - ResponseSetVoiceSettings
     - ResponseSubscribe
     - ResponseUnsubscribe
 
   - name: Types
     children:
     - AccessToken
+    - Activity
+    - Application
+    - Attachment
     - Channel
+    - ChannelMention
     - Config
+    - Component
+    - Device
+    - Embed
     - Emoji
+    - Frame
     - Guild
     - GuildFeature
     - GuildMember
+    - Message
     - OAuth2Application
-    - Presence
+    - Overwrite
+    - Pan
+    - PresenceUpdate
     - RPCToken
     - Role
+    - Team
+    - ThreadMember
+    - ThreadMetadata
     - StageInstance
     - User
+    - UserVoiceState
+    - UserVoiceSettings
+    - VoiceSettings
+    - VoiceSettingsIO
+    - VoiceSettingsMode
     - VoiceState
     - WelcomeScreen
 
   - name: Enumerations
     children:
+    - ActivityType
+    - ApplicationFlag
+    - ButtonStyle
+    - ChannelType
     - CloseEventCode
     - CommandType
+    - ComponentType
+    - DefaultMessageNotificationLevel
+    - DeviceType
+    - EmbedType
     - ErrorCode
     - EventType
+    - ExplicitContentFilterLevel
+    - GuildNSFWLevel
+    - KeyType
+    - MFALevel
+    - MembershipState
+    - MessageActivityType
+    - MessageStickerFormatType
+    - MessageType
     - OAuth2Scope
+    - OverwriteType
+    - PremiumTier
     - PremiumType
+    - PresenceStatus
+    - PrivacyLevel
+    - SystemChannelFlags
     - UserFlag
+    - VerificationLevel
+    - VideoQualityMode
+    - VoiceConnectionState
+    - VoiceSettingsModeType
 
   - name: Errors
     children:
@@ -67,7 +145,6 @@ custom_categories:
     - HTTPError
     - NonceError
     - RPCError
-    - RequestError
 
   - name: Helpers
     children:
